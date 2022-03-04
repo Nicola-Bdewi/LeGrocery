@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title> LeGrocery </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" type="text/css" href="../../navbar.css">
+    <link rel="stylesheet" type="text/css" href="../aisles.css">
+    <link rel="stylesheet" type="text/css" href="../../footer.css">
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="header-box">
+        <nav class="navbar navbar-expand-md">
+
+            <!-- Brand -->
+            <a href="../../index.html" class="logo"><img src="../../Image/Logo/newlogo.png" height="70"></a>
+
+            <div class="button-box">
+                <!-- Toggler/collapsibe Search Button -->
+                <button class="navbar-toggler search-icon" type="button" data-toggle="collapse"
+                    data-target="#collapsibleSearchbar">
+                    <span class="fa fa-search"></span>
+                </button>
+
+                <!-- Toggler/collapsibe Menu Button -->
+                <button class="navbar-toggler bar-icon" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavbar">
+                    <span class="fa fa-bars"></span>
+                </button>
+            </div>
+
+            <!-- Navbar search bar -->
+            <div class="collapse navbar-collapse menu-toggle-box" id="collapsibleSearchbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <form action="#" method="" id="search-form">
+                            <input type="text" placeholder="Search a product...">
+                            <button type="submit">
+                                <div id="search-btn" class="fa fa-search icon-btn"></div>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Navbar text links -->
+            <div class="collapse navbar-collapse menu-box menu-toggle-box" id="collapsibleNavbar">
+                <div class="navbar-mbox">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mbox-item">
+                            <a class="nav-link" href="../../index.html">HOME</a>
+                        </li>
+                        <li class="nav-item mbox-item">
+                            <a class="nav-link" href="../../index.html#special-id">SPECIAL</a>
+                        </li>
+                        <li class="nav-item mbox-item">
+                            <a class="nav-link" href="../../index.html#aisle-id">AISLE</a>
+                        </li>
+                        <li class="nav-item mbox-item">
+                            <a class="nav-link" href="#footer-id">CONTACT</a>
+                        </li>
+                        <li class="nav-item mbox-item nodisplay">
+                            <a class="nav-link nodisplay" href="#">CART</a>
+                        </li>
+                        <li class="nav-item mbox-item nodisplay">
+                            <a class="nav-link nodisplay" href="#">LOGIN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Navbar icon links -->
+            <div class="collapse navbar-collapse  icon-box" id="collapsibleNavbar">
+                <div class="navbar-rbox">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link navbar-icon" href="#">
+                                <div id="search-btn" class="fa fa-search icon-btn"></div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-icon" href="#">
+                                <div id="cart-btn" class="fa fa-shopping-cart icon-btn"></div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-icon" href="#">
+                                <div id="login-btn" class="fa fa-user icon-btn"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+    <div class=nav-spacer></div>
+    <!-- NAVBAR -->
+
+    <!-- JUMBOTRON -->
+    <div class="big-box">
+        <div class="container-fluid text-center">
+            <h1 class="font-weight-bold">Pantry Item</h1>
+        </div>
+    </div>
+    <!-- JUMBOTRON -->
+
+    <!-- SORT BY -->
+    <div class="container sort-box">
+        <div class="sort-box-text">
+            Our Products
+        </div>
+        <div class="sort-box-btn">
+            Sort by:
+            <form action = "">
+                <select name = "sort">
+                    <option>Best Match</option>
+                    <option>Newest</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                </select>
+            </form>
+        </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-3">
+                <div class="card">
+                    <a href = "Product/rice.html" class = nochange><img calss="card-img-top" src="../../Image/Pantry/rice.jpg" style="object-fit: fill;"/></a> 
+                    <div class="card-body">
+                        <h4 class="class-title"><a href = "Product/rice.html" class = nochange>Rice</a></h4> <!-- Title needs to be less than 13 characters including spaces-->
+                        <p class="card-text">Price: 20.00$ / Bag</p>  
+                        <form action="" class="add-quantity">
+                            <div class="quantity-btn">
+                                <button type="button" class="fa fa-minus plus-minus"></button>
+                                <input type="number" value="1" min="1" max="" id="quantity-box">
+                                <button type="button" class="fa fa-plus plus-minus"></button>
+                            </div>
+                            <div class="quantity-cart">
+                                <a href="#" class="btn btn-primary">Add to Cart</i></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-3">
+                <div class="card">
+                    <a href = "Product/flour.html" class = nochange><img calss="card-img-top" src="../../Image/Pantry/flour.jpg" style="object-fit: fill;"/></a> 
+                    <div class="card-body">
+                        <h4 class="class-title"><a href = "Product/flour.html" class = nochange>Flour</a></h4> <!-- Title needs to be less than 13 characters including spaces-->
+                        <p class="card-text">Price: 10.00$ / Bag</p>  
+                        <form action="" class="add-quantity">
+                            <div class="quantity-btn">
+                                <button type="button" class="fa fa-minus plus-minus"></button>
+                                <input type="number" value="1" min="1" max="" id="quantity-box">
+                                <button type="button" class="fa fa-plus plus-minus"></button>
+                            </div>
+                            <div class="quantity-cart">
+                                <a href="#" class="btn btn-primary">Add to Cart</i></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-3">
+                <div class="card">
+                    <a href = "Product/sugar.html" class = nochange><img calss="card-img-top" src="../../Image/Pantry/sugar.jpg" style="object-fit: fill;"/></a> 
+                    <div class="card-body">
+                        <h4 class="class-title"><a href = "Product/sugar.html" class = nochange>Sugar</a></h4> <!-- Title needs to be less than 13 characters including spaces-->
+                        <p class="card-text">Price: 4.50$ / Bag</p>  
+                        <form action="" class="add-quantity">
+                            <div class="quantity-btn">
+                                <button type="button" class="fa fa-minus plus-minus"></button>
+                                <input type="number" value="1" min="1" max="" id="quantity-box">
+                                <button type="button" class="fa fa-plus plus-minus"></button>
+                            </div>
+                            <div class="quantity-cart">
+                                <a href="#" class="btn btn-primary">Add to Cart</i></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-3">
+                <div class="card">
+                    <a href = "Product/ricenoo.html" class = nochange><img calss="card-img-top" src="../../Image/Pantry/ricenoo.jpg" style="object-fit: fill;"/></a> 
+                    <div class="card-body">
+                        <h4 class="class-title"><a href = "Product/ricenoo.html" class = nochange>Rice noodle</a></h4> <!-- Title needs to be less than 13 characters including spaces-->
+                        <p class="card-text">Price: 3.00$ / Bag</p>  
+                        <form action="" class="add-quantity">
+                            <div class="quantity-btn">
+                                <button type="button" class="fa fa-minus plus-minus"></button>
+                                <input type="number" value="1" min="1" max="" id="quantity-box">
+                                <button type="button" class="fa fa-plus plus-minus"></button>
+                            </div>
+                            <div class="quantity-cart">
+                                <a href="#" class="btn btn-primary">Add to Cart</i></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-3">
+                <div class="card">
+                    <a href = "Product/salt.html" class = nochange><img calss="card-img-top" src="../../Image/Pantry/salt.jpg" style="object-fit: fill;"/></a> 
+                    <div class="card-body">
+                        <h4 class="class-title"><a href = "Product/salt.html" class = nochange>Salt</a></h4> <!-- Title needs to be less than 13 characters including spaces-->
+                        <p class="card-text">Price: 5.00$ / Bag</p>  
+                        <form action="" class="add-quantity">
+                            <div class="quantity-btn">
+                                <button type="button" class="fa fa-minus plus-minus"></button>
+                                <input type="number" value="1" min="1" max="" id="quantity-box">
+                                <button type="button" class="fa fa-plus plus-minus"></button>
+                            </div>
+                            <div class="quantity-cart">
+                                <a href="#" class="btn btn-primary">Add to Cart</i></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PRODUCTS -->
+
+    <!-- FOOTER -->
+    <footer id = "footer-id">
+        <div class="container-fluid bg-dark text-white">
+            <div class="row text-center">
+
+                <div class="col-12 newsletter">
+                    <h4>SUBSCRIBE TO OUR NEWSLETTER!</h4>
+                    <form class="" action="">
+                        <input class="form-control" type="text" placeholder="example@mail.com">
+                        <button class="btn btn-success" type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6">
+
+                    <h4>Contact Us!</h4>
+                    <hr class="hr-75">
+                    <p>1866-000-0000</p>
+                    <p>support@legrocery.ca</p>
+                    <p>1455 Boulevard Maisonneuve</p>
+                    <p>Montreal, QC, H3G 1M8</p>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6">
+
+                    <h4>Visit Us</h4>
+                    <hr class="hr-75">
+                    <p><a href="https://www.facebook.com" class="fa fa-facebook media-icon"></a></p>
+                    <p><a href="https://www.instagram.com" class="fa fa-instagram media-icon"></a></p>
+                    <p><a href="https://twitter.com" class="fa fa-twitter media-icon"></a></p>
+                    <p><a href="https://ca.linkedin.com" class="fa fa-linkedin media-icon"></a></p>
+                </div>
+
+                <div class="col-12">
+                    <hr class="hr-100">
+                    <h5>&copy; LeGrocery Inc. | All Rights Reserved</h5>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER -->
+
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6de11d050e854bb9',m:'27ncBLGacDSB83LyBwzUHmPHHRob4SMe_zkAIgL07CU-1644955131-0-Ae/Ci8iKbtAckNW9ZRASyN0iWo6o8UHkb/Y1KfI235mdRjPNBvpqWa5HWaaqKgo0NJWbPKJT+HR7N/S4Y220LwVq+XxGIQlwh4EIpznMVGj144RgFGlO0YtPQ/QxjfcigZiBFaggobewwAWxDEeC7QwcBFspUBQKQX43mkc1QMpSl5ao5T+MpgRRiw8qGP4JKg==',s:[0x616b3cdb6e,0xf8e0d1ff0a],}})();</script></body>
+
+</html>

@@ -1,0 +1,22 @@
+.cart{
+    
+    background-color: #33eb88;
+    border: 1px solid black ;
+    border-radius: 10px;
+}
+
+.items-cart .info-cart .quantity-cart .price-cart{
+    display: grid;
+    text-align: center;
+}
+
+.cart-images{
+    height:100px;
+    width:150px;
+    border: 2px solid grey;
+    background-color: white;
+}
+
+.quantity-cart{
+    margin-top: 5px;
+}

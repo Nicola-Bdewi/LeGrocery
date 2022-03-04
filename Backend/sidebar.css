@@ -1,0 +1,147 @@
+*{
+    font-family: verdana, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar-box {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #33eb88;
+    display: flex;
+    justify-content: center;
+}
+
+.mother-box {
+    width: 100%;
+    margin: auto 0;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.logo-box #small-logo {
+    display: none;
+}
+
+.menu-box {
+    text-align: center;
+}
+
+.text-list {
+    margin: 0;
+    padding: 0;
+}
+
+.text-list li {
+    padding: 15px 0;
+    font-size: 20px;
+}
+
+.text-list li a{
+    color: white;
+    transition: 0.3s;
+}
+
+.text-list li a:hover {
+    color: #25a862;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.icon-list {
+    display: none;
+}
+
+.profile-box {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.profile-box #big-log-out-btn {
+    display: inline;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 5px;
+    border-color: #25a862;
+    font-size: 20px;
+    background-color: white;
+    color: #33eb88;
+    transition: 0.3s;
+}
+
+.profile-box #big-log-out-btn:hover {
+    background-color: #25a862;
+    color: white;
+    transition: 0.3s;
+}
+
+.profile-box #small-log-out-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-box {
+        width: 70px;
+    }
+
+    .logo-box #big-logo{
+        display: none;
+    }
+
+    .logo-box #small-logo {
+        display: block;
+    }
+
+    .text-list {
+        display: none;
+    }
+
+    .icon-list {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .icon-list li a i {
+        padding: 20px 0;
+        font-size: 30px;
+        color: white;
+    }
+
+    .icon-list li a i:hover {
+        color: #25a862;
+    }
+
+    .profile-box #big-log-out-btn {
+        display: none;
+    }
+
+    .profile-box #small-log-out-btn {
+        display: inline;
+        border-style: solid;
+        border-width: thin;
+        border-radius: 5px;
+        border-color: #25a862;
+        font-size: 30px;
+        padding: 0;
+        width: 47px;
+        background-color: white;
+        color: #33eb88;
+        transition: 0.3s;
+    }
+
+    .profile-box #small-log-out-btn:hover {
+        background-color: #25a862;
+        color: white;
+        transition: 0.3s;
+    }
+}

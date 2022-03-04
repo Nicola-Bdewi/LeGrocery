@@ -1,0 +1,336 @@
+*{
+    font-family: Verdana, sans-serif;
+}
+
+.wrapper {
+    margin-left: 300px;
+}
+
+.header-box {
+    display: flex;
+    background-color: #33eb88;
+    margin: 15px 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    justify-content: space-between;
+}
+
+.header-text {
+    color: white;
+    border-radius: 5px;
+    margin: 0;
+}
+
+#save-order-btn {
+    width: 41.5px;
+    padding: 0;
+    border-color: #25a862;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 5px;
+    font-size: 25px;
+    color: #33eb88;
+    transition: 0.3s;
+}
+
+#save-order-btn:hover {
+    background-color: #25a862;
+    color: white;
+    transition: 0.3s;
+}
+
+.item-box {
+    margin: 0px 0px 15px 0px;
+    padding: 10px;
+    align-items: center;
+    border: solid #25a862;
+    border-width: thin;
+    border-radius: 5px;
+    background-color: #25a862
+}
+
+.image-box {
+    padding: 0px;
+    height: 50px;
+}
+
+.image-box div {
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.id-box {
+    height: 50px;
+    padding: 0px;
+}
+
+.id-box div {
+    background-color: white;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-box {
+    height: 50px;
+    padding: 0px;
+}
+
+.name-box div {
+    background-color: white;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-box a{
+    text-decoration: none;
+    color: black;
+}
+
+.quantity-box {
+    height: 50px;
+    padding: 0px;
+}
+
+#box-inside-box {
+    background-color: white;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quantity-abs-box {
+    display: flex;
+    position: relative;
+}
+
+#quantity-abs-box h6 {
+    height: 100%;
+    margin: 0px;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+
+#input-box {
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: thin;
+    width: 100px;
+    padding-left: 5px;
+}
+
+.plus-minus {
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    padding: 0px;
+    padding-top: 2px;
+    border-style: solid;
+    border-color: black;
+    border-width: thin;
+    border-radius: 5px;
+    background-color: #33eb88;
+    border-color: #25a862;
+    color: white;
+    transition: 0.3s;
+}
+
+.plus-minus:hover {
+    background-color: #25a862;
+    transition: 0.3s;
+}
+
+.price-box {
+    height: 50px;
+    padding: 0px;
+}
+
+.price-box div{
+    background-color: white;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box {
+    padding: 0px;
+    height: 50px;
+}
+
+.icon-box div{
+    background-color: white;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.icon-box button {
+    font-size: 30px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: #33eb88;
+}
+
+.icon-box button:hover {
+    background-color: #33eb88;
+    color: white;
+    transition: 0.3s;
+}
+
+@media only screen and (min-width:1200px) {
+    .id-box {
+        padding: 0px 5px 0px 10px;
+    }
+    
+    .name-box {
+        padding: 0px 5px;
+    }
+    
+    .quantity-box {
+        padding: 0px 5px;
+    }
+
+    .price-box {
+        padding: 0px 10px 0px 5px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1200px) {
+    .item-box {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .image-box {
+        margin-bottom: 10px;
+        padding-right: 5px;
+    }
+    
+    .id-box {
+        margin-bottom: 10px;
+        padding: 0px 5px;
+    }
+    
+    .name-box {
+        margin-bottom: 10px;
+        padding-left: 5px;
+    }
+    
+    .quantity-box {
+        padding-right: 5px;
+    }
+
+    .price-box {
+        padding: 0px 5px;
+    }
+
+    .icon-box {
+        padding-left: 5px;
+    }
+}
+
+@media only screen and (min-width:575px) and (max-width:992px) {
+    .item-box {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .image-box {
+        margin-bottom: 10px;
+        padding-right: 5px;
+    }
+    
+    .id-box {
+        margin-bottom: 10px;
+        padding-left: 5px;
+    }
+    
+    .name-box {
+        margin-bottom: 10px;
+        padding-right: 5px;
+    }
+    
+    .quantity-box {
+        margin-bottom: 10px;
+        padding-left: 5px;
+    }
+
+    .price-box {
+        padding-right: 5px;
+    }
+
+    .icon-box {
+        padding-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        margin-left: 70px;
+    }
+
+    .header-text {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:575px) {
+    .item-box {
+        justify-content: center;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .image-box {
+        margin-bottom: 10px;
+    }
+    
+    .id-box {
+        margin-bottom: 10px;
+    }
+    
+    .name-box {
+        margin-bottom: 10px;
+    }
+    
+    .quantity-box {
+        margin-bottom: 10px;
+    }
+    
+    .price-box {
+        margin-bottom: 10px;
+    }
+}
+
