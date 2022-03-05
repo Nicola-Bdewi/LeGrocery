@@ -22,7 +22,6 @@ function counterOfPlus(){
 	if(data>=10 & conf===true){
 		window.confirm("You chose the same product 10 times. Are you sure you would like to continue?");
 		conf = false;
-		data--;
 	}
 	data = data + 1;
 	count.value = data;
