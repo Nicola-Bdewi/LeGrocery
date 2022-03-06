@@ -14,6 +14,7 @@ function counterOfMinus(){
 	}
 	data = data - 1;
 	count.value = data;
+	price.textContent= (Math.round(data*x * 100) / 100).toFixed(2);
 }
 
 function counterOfPlus(){
