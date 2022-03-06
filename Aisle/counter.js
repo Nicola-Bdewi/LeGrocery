@@ -53,8 +53,8 @@ function resetEverything(){
 
 */
 	window.localStorage.clear();
-	count.value = localStorage.setItem("counter",1);
-	price.textContent=localStorage.setItem("price",(Math.round(data*x*100) / 100).toFixed(2));
+	count.value = localStorage.setItem("counter",0);
+	price.textContent=localStorage.setItem("price",0);
 	location.reload();
 }
 
