@@ -125,3 +125,11 @@
     padding-left: 5px;
     background-color: white;
 }
+
+.reset1{
+    display: flex;
+    justify-content: left;
+    margin-top: 5px;
+
+}
+
