@@ -1,3 +1,13 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .sort-box {
     display:flex;
     justify-content: space-between;
@@ -68,15 +78,35 @@
     transition: 0.3s;
 }
 
-#quantity-box {
+.m-quantity-box {
     width: 100%;
     margin: 0px 15px 0px 15px;
     display: flex;
-    text-align: center;
+    position: relative;
+    background-color: white;
+    border: solid #25a862;
     border-radius: 5px;
-    border-color: #25a862;
     border-width: thin;
-    border-style: solid;
+}
+
+.c-quantity-box {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: #33eb88;
+    padding: 2px 10px;
+    margin: 3px 3px 3px 0px;
+    border-radius: 5px;
+}
+
+#quantity-box {
+    width: 100%;
+    display: flex;
+    border: 0px;
+    background: none;
+    text-align: center;
+    padding: none;
 }
 
 .quantity-cart {
@@ -126,10 +156,22 @@
     background-color: white;
 }
 
-.reset1{
+.reset{
     display: flex;
-    justify-content: left;
-    margin-top: 5px;
+    justify-content: right;
+    margin-top: 15px;
 
 }
 
+.bar-icon {
+    color: black;
+}
+
+.m-price-box {
+    display: flex;
+}
+
+.c-price-box {
+    margin-left: auto;
+    display: flex;
+}

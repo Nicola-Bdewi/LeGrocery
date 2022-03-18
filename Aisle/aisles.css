@@ -1,3 +1,13 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .nochange {
     all: inherit;
 }
@@ -82,7 +92,7 @@
     border-color: #25a862;
 }
 
-#quantity-box {
+.quantity-box {
     width: 100%;
     height: 100%;
     margin: 0px 5px 0px 5px;
