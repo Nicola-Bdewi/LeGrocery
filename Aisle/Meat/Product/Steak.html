@@ -136,22 +136,31 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-o"></i>
                     </p>
-                    <p>
-                    <h3 class="float-right">31.00$ / Unit</h3>
-                    </p>
-                    <p>
-                    <h3>Price:</h3>
-                    </p>
+                   <div class="m-price-box"> <!--change-->
+                            <h3>Price:</h3> <!--change-->
+                        <div class="c-price-box"> <!--change-->
+                            <h3 id = "price">20.00</h3> <!--change-->
+                            <h3>$</h3> <!--change-->
+                        </div> <!--change-->
+                    </div> <!--change-->
                     <hr>
                     <form action="" class="add-quantity">
-                        <div class="quantity-btn">
-                            <button type="button" class="fa fa-minus plus-minus"></button>
-                            <input type="number" value="1" min="1" max="10" id="quantity-box">
-                            <button type="button" class="fa fa-plus plus-minus"></button>
-                        </div>
+                        <div class="quantity-btn"> <!--change-->
+                            <button type="button" class="fa fa-minus plus-minus" id="minus"></button> <!--change-->
+                            <div class="m-quantity-box"> <!--change-->
+                                <input type="number" value="1" min="1" max="10" id="quantity-box"> <!--change-->
+                                <div class="c-quantity-box"> <!--change-->
+                                    Units <!--change-->
+                                </div> <!--change-->
+                            </div> <!--change-->
+                            <button type="button" class="fa fa-plus plus-minus" id="plus"></button> <!--change-->
+                        </div> <!--change-->
                         <div class="quantity-cart">
                             <a href="#" class="btn btn-primary" id=quantity-cart>Add to Cart</a>
                         </div>
+                        <div class = "reset"> <!--change-->
+                            <button type="button" class=" btn btn-success " id="resetAll">Reset</button> <!--change-->
+                        </div> <!--change-->
                     </form>
 
                 </div>
@@ -245,6 +254,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- PRODUCT QUANTITY COUNTER --> <!--change-->
+    <script src="../../productcounter.js"></script> <!--change-->
 </body>
 
 </html>
