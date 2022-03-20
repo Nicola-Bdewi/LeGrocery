@@ -1,108 +1,69 @@
-let minus = document.getElementById("minus");
-let plus = document.getElementById("plus");
-let count = document.getElementsById("quantity-box");
-let count2 = document.getElementById("quantity-box2");
-let count3 = document.getElementById("quantity-box3");
-let data = new Number(localStorage.getItem("counter")); // for not losing the counts after refreshing and pressing + or -
-let conf = false;
-let price = document.getElementById("price");
+let Price1 = document.getElementById("price-1");
+let Price2 = document.getElementById("price-2");
+let Price3 = document.getElementById("price-3");
 
+let count1 = document.getElementById("quantity-box-1");
+let count2 = document.getElementById("quantity-box-2");
+let count3 = document.getElementById("quantity-box-3");
 
-function counterOfMinus(){
+let Total_Items = document.getElementById('cart-total-items');
+let Cart_Subtotal = document.getElementById('cart-subtotal');
+let GSTID = document.getElementById('cart-gst');
+let QSTID = document.getElementById('cart-qst');
+let CartTotal = document.getElementById('cart-total');
 
-	data = data - 1;
-	count.value = data;
-	localStorage.setItem("counter",data);
-	localStorage.setItem("price", (Math.round(data*x * 100) / 100).toFixed(2));
-	price.textContent = (Math.round(data*x * 100) / 100).toFixed(2);
+var SubTotal = 0.00;
+var GST = 0.00;
+var QST = 0.00;
+var FinalTotal = 0.00;
+
+function TotalItem() {
+	total = parseInt(count1.value) + parseInt(count2.value) + parseInt(count3.value);
+	Total_Items.textContent = total;
 }
 
-function counterOfPlus(){
-	
-	data = data + 1;
-	count.value = data;
-	localStorage.setItem("counter",data);
-	localStorage.setItem("price", (Math.round(data*x * 100)/100).toFixed(2)); // The price should br just two decimals after the point.
-    price.textContent = (Math.round(data*x*100) / 100).toFixed(2);
-
+function SubtotalPrice() {
+	total = (parseFloat(count1.value) * (parseFloat(Price1.textContent))) + (parseFloat(count2.value)*parseFloat(Price2.textContent)) + (parseFloat(count3.value)*parseFloat(Price3.textContent));
+	total = total.toFixed(2);
+	Cart_Subtotal.textContent = total;
+	SubTotal = total;
 }
 
-
-function counterOfMinus(){
-
-	data = data - 1;
-	count2.value = data;
-	localStorage.setItem("counter",data);
-	localStorage.setItem("price", (Math.round(data*x * 100) / 100).toFixed(2));
-	price.textContent = (Math.round(data*x * 100) / 100).toFixed(2);
+function gst() {
+	GST = (SubTotal * 0.05).toFixed(2);
+	GSTID.textContent = GST;
 }
 
-function counterOfPlus(){
-	
-	data = data + 1;
-	count2.value = data;
-	localStorage.setItem("counter",data);
-	localStorage.setItem("price", (Math.round(data*x * 100)/100).toFixed(2)); // The price should br just two decimals after the point.
-    price.textContent = (Math.round(data*x*100) / 100).toFixed(2);
-
+function qst() {
+	QST = (SubTotal * 0.10).toFixed(2);
+	QSTID.textContent = QST;
 }
 
-
-function counterOfMinus(){
-
-	data = data - 1;
-	count3.value = data;
-	localStorage.setItem("counter",data);
-	localStorage.setItem("price", (Math.round(data*x * 100) / 100).toFixed(2));
-	price.textContent = (Math.round(data*x * 100) / 100).toFixed(2);
+function finaltotal() {
+	FinalTotal = (parseFloat(GST) + parseFloat(QST) + parseFloat(SubTotal));
+	CartTotal.textContent = FinalTotal.toFixed(2);
 }
 
-function counterOfPlus(){
-	
-	data = data + 1;
-	count3.value = data;
-	localStorage.setItem("counter",data);
-	localStorage.setItem("price", (Math.round(data*x * 100)/100).toFixed(2)); // The price should br just two decimals after the point.
-    price.textContent = (Math.round(data*x*100) / 100).toFixed(2);
-
+function update() {
+	TotalItem();
+	SubtotalPrice();
+	gst();
+	qst();
+	finaltotal();
 }
 
+function counter(obj, id, increment) {
+	temp = document.getElementById(id)
+	current_qty = parseInt(temp.value)
 
-
-
-
-minus.addEventListener("click",counterOfMinus);
-plus.addEventListener("click",counterOfPlus);
-
-
-
-
-
-
-function updateCart(){
-
-    //total item update
-    var totalItemCount = 0;
-    var itemCount = document.getElementsByClassName("item-count");
-    itemCount.forEach(arg => {
-        totalItemCount += arg;
-    });
-    document.getElementById("cart-total-items").innerHTML = totalItemCount;
-
-    //subtotal update
-    var totalSubtotal = 0;
-    var subtotalArr = document.getElementsByClassName("cart-item-price");
-    subtotalArr.forEach(arg => {
-        totalSubtotal += arg;
-    });
-    document.getElementById("cart-subtotal").innerHTML = totalSubtotal;
-
-    //GST/QST/Total update
-    var gst = totalSubtotal * 0.05;
-    var qst = totalSubtotal * 0.0975;
-    var totalCost = totalSubtotal + gst + qst;
-    document.getElementById("cart-gst").innerHTML = gst;
-    document.getElementById("cart-qst").innerHTML = qst;
-    document.getElementById("cart-total").innerHTML = totalCost;
-
-};
+	if (increment) {
+		temp.value = current_qty + 1
+		update();
+	}
+	else {
+		if (temp.value > 1) {
+			temp.value = current_qty - 1
+			update();
+		}
+	}
+}
