@@ -21,38 +21,20 @@
     <!-- NAVBAR -->
     <div class="header-box">
         <nav class="navbar navbar-expand-md">
-
             <!-- Brand -->
-            <a href="../../index.html" class="logo"><img src="../../Image/Logo/newlogo.png" height="70"></a>
-
+            <a href="../../index.html" class="logo"><img src="../../Image/Logo/newlogo.png" height="70" alt="logo" /></a>
             <div class="button-box">
-                <!-- Toggler/collapsibe Search Button -->
-                <button class="navbar-toggler search-icon" type="button" data-toggle="collapse"
-                    data-target="#collapsibleSearchbar">
-                    <span class="fa fa-search"></span>
+                <!-- Toggler/collapsibe Small Search Button -->
+                <button class="navbar-toggler search-icon" type="button" id="small-search-btn"
+                    onclick="smallsearchclick()">
+                    <span class="fa fa-search" id="small-search-btn-c"></span>
                 </button>
-
                 <!-- Toggler/collapsibe Menu Button -->
                 <button class="navbar-toggler bar-icon" type="button" data-toggle="collapse"
-                    data-target="#collapsibleNavbar">
-                    <span class="fa fa-bars"></span>
+                    data-target="#collapsibleNavbar" id="menu-bar">
+                    <span class="fa fa-bars" id="menu-bar-c"></span>
                 </button>
             </div>
-
-            <!-- Navbar search bar -->
-            <div class="collapse navbar-collapse menu-toggle-box" id="collapsibleSearchbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <form action="#" method="" id="search-form">
-                            <input type="text" placeholder="Search a product...">
-                            <button type="submit">
-                                <div id="search-btn" class="fa fa-search icon-btn"></div>
-                            </button>
-                        </form>
-                    </li>
-                </ul>
-            </div>
-
             <!-- Navbar text links -->
             <div class="collapse navbar-collapse menu-box menu-toggle-box" id="collapsibleNavbar">
                 <div class="navbar-mbox">
@@ -78,14 +60,13 @@
                     </ul>
                 </div>
             </div>
-
             <!-- Navbar icon links -->
             <div class="collapse navbar-collapse  icon-box" id="collapsibleNavbar">
                 <div class="navbar-rbox">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link navbar-icon" href="#">
-                                <div id="search-btn" class="fa fa-search icon-btn"></div>
+                            <a class="nav-link navbar-icon" id="big-search-btn" onclick="bigsearchclick()">
+                                <div class="fa fa-search icon-btn" id="big-search-btn-c"></div>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -101,10 +82,25 @@
                     </ul>
                 </div>
             </div>
-
         </nav>
     </div>
     <div class=nav-spacer></div>
+    <div id="big-search-bar">
+        <form action="#" method="" id="big-search-form">
+            <input type="text" placeholder="Search a product...">
+            <button type="submit">
+                <div class="fa fa-search icon-btn"></div>
+            </button>
+        </form>
+    </div>
+    <div id="small-search-bar">
+        <form action="#" method="" id="small-search-form">
+            <input type="text" placeholder="Search a product...">
+            <button type="submit">
+                <div class="fa fa-search icon-btn"></div>
+            </button>
+        </form>
+    </div>
     <!-- NAVBAR -->
 
     <!-- JUMBOTRON -->
@@ -122,8 +118,8 @@
         </div>
         <div class="sort-box-btn">
             Sort by:
-            <form action = "">
-                <select name = "sort">
+            <form action="">
+                <select name="sort">
                     <option>Best Match</option>
                     <option>Newest</option>
                     <option>Price: Low to High</option>
@@ -139,9 +135,11 @@
 
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-3">
                 <div class="card">
-                    <a href = "Product/Bacon.html" class = nochange><img calss="card-img-top" src="../../Image/Meat/bacon.webp" style="object-fit: fill;"/></a>
+                    <a href="Product/Bacon.html" class=nochange><img calss="card-img-top"
+                            src="../../Image/Meat/bacon.webp" style="object-fit: fill;" /></a>
                     <div class="card-body">
-                        <h4 class="class-title"><a href = "Product/Bacon.html" class = nochange>Bacon</a></h4> <!-- Title needs to be less than 13 characters including spaces-->
+                        <h4 class="class-title"><a href="Product/Bacon.html" class=nochange>Bacon</a></h4>
+                        <!-- Title needs to be less than 13 characters including spaces-->
                         <p class="card-text">Price: 7.50$ / 0.5 Kg</p>
                         <form action="" class="add-quantity">
                             <div class="quantity-btn">
@@ -162,9 +160,10 @@
 
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-3">
                 <div class="card">
-                    <a href = "Product/Chicken.html" class = nochange><img calss="card-img-top" src="../../Image/Meat/chicken.jpg" style="object-fit: fill;"/></a>
+                    <a href="Product/Chicken.html" class=nochange><img calss="card-img-top"
+                            src="../../Image/Meat/chicken.jpg" style="object-fit: fill;" /></a>
                     <div class="card-body">
-                        <h4 class="class-title"><a href = "Product/Chicken.html" class = nochange>Chicken</a></h4>
+                        <h4 class="class-title"><a href="Product/Chicken.html" class=nochange>Chicken</a></h4>
                         <p class="card-text">Price: 8.00$ / Kg</p>
                         <form action="" class="add-quantity">
                             <div class="quantity-btn">
@@ -185,9 +184,10 @@
 
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-3">
                 <div class="card">
-                    <a href = "Product/Porkchop.html" class = nochange><img calss="card-img-top" src="../../Image/Meat/porkchop.jpg" style="object-fit: fill;"></a>
+                    <a href="Product/Porkchop.html" class=nochange><img calss="card-img-top"
+                            src="../../Image/Meat/porkchop.jpg" style="object-fit: fill;"></a>
                     <div class="card-body">
-                        <h4 class="class-title"><a href = "Product/Porkchop.html" class = nochange>Pork Chops</a></h4>
+                        <h4 class="class-title"><a href="Product/Porkchop.html" class=nochange>Pork Chops</a></h4>
                         <p class="card-text">Price: 12.50$ / Kg </p>
                         <form action="" class="add-quantity">
                             <div class="quantity-btn">
@@ -208,9 +208,10 @@
 
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-3">
                 <div class="card">
-                    <a href = "Product/Salmon.html" class = nochange><img calss="card-img-top" src="../../Image/Meat/salmon.jpg" style="object-fit: fill;"></a>
+                    <a href="Product/Salmon.html" class=nochange><img calss="card-img-top"
+                            src="../../Image/Meat/salmon.jpg" style="object-fit: fill;"></a>
                     <div class="card-body">
-                        <h4 class="class-title"><a href = "Product/Salmon.html" class = nochange>Salmon</a></h4>
+                        <h4 class="class-title"><a href="Product/Salmon.html" class=nochange>Salmon</a></h4>
                         <p class="card-text">Price: 14.00$ / Kg</p>
                         <form action="" class="add-quantity">
                             <div class="quantity-btn">
@@ -231,9 +232,10 @@
 
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-3">
                 <div class="card">
-                    <a href = "Product/Steak.html" class = nochange><img calss="card-img-top" src="../../Image/Meat/steak.webp" style="object-fit: fill;"></a>
+                    <a href="Product/Steak.html" class=nochange><img calss="card-img-top"
+                            src="../../Image/Meat/steak.webp" style="object-fit: fill;"></a>
                     <div class="card-body">
-                        <h4 class="class-title"><a href = "Product/Steak.html" class = nochange>Ribeye Steak</a></h4>
+                        <h4 class="class-title"><a href="Product/Steak.html" class=nochange>Ribeye Steak</a></h4>
                         <p class="card-text">Price: 31.00$ / Kg</p>
                         <form action="" class="add-quantity">
                             <div class="quantity-btn">
@@ -275,20 +277,20 @@
                             <a href="https://twitter.com" class="fa fa-twitter media-icon"></a>
                             <a href="https://ca.linkedin.com" class="fa fa-linkedin media-icon"></a>
                         </div>
-                        <hr class="h-line"/>
+                        <hr class="h-line" />
                     </div>
 
                     <div class="quick col-sm-12 col-md-4 col-lg-4 col-xl-4">
                         <span style="font-weight: bold; font-size: 20px;">QUICK LINKS</span>
                         <ul class="footer-quick-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#special-id">Special</a></li>
-                            <li><a href="#aisle-id">Aisle</a></li>
+                            <li><a href="../../index.html">Home</a></li>
+                            <li><a href="../../index.html#special-id">Special</a></li>
+                            <li><a href="../../index.html#aisle-id">Aisle</a></li>
                             <li><a href="#footer-id">FAQ</a></li>
-                            <li><a href="shopping_cart.html">Shopping Cart</a></li>
-                            <li><a href="login.html">Login</a></li>
+                            <li><a href="../../shopping_cart.html">Shopping Cart</a></li>
+                            <li><a href="../../login.html">Login</a></li>
                         </ul>
-                        <hr class="h-line"/>
+                        <hr class="h-line" />
                     </div>
 
                     <div class="newsletter col-sm-12 col-md-4 col-lg-4 col-xl-4">
@@ -325,6 +327,9 @@
 
     <!-- PRODUCT QUANTITY COUNTER-->
     <script src="../aislecounter.js"></script>
+
+    <!-- NAVBAR ANIMATION-->
+    <script src="../../navbar.js"></script>
 </body>
 
 </html>

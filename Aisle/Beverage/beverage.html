@@ -23,39 +23,20 @@
     <!-- NAVBAR -->
     <div class="header-box">
         <nav class="navbar navbar-expand-md">
-
             <!-- Brand -->
-            <a href="../../index.html" class="logo"><img src="../../Image/Logo/newlogo.png" height="70"
-                    alt="logo" /></a>
-
+            <a href="../../index.html" class="logo"><img src="../../Image/Logo/newlogo.png" height="70" alt="logo" /></a>
             <div class="button-box">
-                <!-- Toggler/collapsibe Search Button -->
-                <button class="navbar-toggler search-icon" type="button" data-toggle="collapse"
-                    data-target="#collapsibleSearchbar">
-                    <span class="fa fa-search"></span>
+                <!-- Toggler/collapsibe Small Search Button -->
+                <button class="navbar-toggler search-icon" type="button" id="small-search-btn"
+                    onclick="smallsearchclick()">
+                    <span class="fa fa-search" id="small-search-btn-c"></span>
                 </button>
-
                 <!-- Toggler/collapsibe Menu Button -->
                 <button class="navbar-toggler bar-icon" type="button" data-toggle="collapse"
-                    data-target="#collapsibleNavbar">
-                    <span class="fa fa-bars"></span>
+                    data-target="#collapsibleNavbar" id="menu-bar">
+                    <span class="fa fa-bars" id="menu-bar-c"></span>
                 </button>
             </div>
-
-            <!-- Navbar search bar -->
-            <div class="collapse navbar-collapse menu-toggle-box" id="collapsibleSearchbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <form action="#" method="" id="search-form">
-                            <input type="text" placeholder="Search a product...">
-                            <button type="submit">
-                                <div id="search-btn" class="fa fa-search icon-btn"></div>
-                            </button>
-                        </form>
-                    </li>
-                </ul>
-            </div>
-
             <!-- Navbar text links -->
             <div class="collapse navbar-collapse menu-box menu-toggle-box" id="collapsibleNavbar">
                 <div class="navbar-mbox">
@@ -81,14 +62,13 @@
                     </ul>
                 </div>
             </div>
-
             <!-- Navbar icon links -->
             <div class="collapse navbar-collapse  icon-box" id="collapsibleNavbar">
                 <div class="navbar-rbox">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link navbar-icon" href="#">
-                                <div id="search-btn" class="fa fa-search icon-btn"></div>
+                            <a class="nav-link navbar-icon" id="big-search-btn" onclick="bigsearchclick()">
+                                <div class="fa fa-search icon-btn" id="big-search-btn-c"></div>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -104,10 +84,25 @@
                     </ul>
                 </div>
             </div>
-
         </nav>
     </div>
     <div class=nav-spacer></div>
+    <div id="big-search-bar">
+        <form action="#" method="" id="big-search-form">
+            <input type="text" placeholder="Search a product...">
+            <button type="submit">
+                <div class="fa fa-search icon-btn"></div>
+            </button>
+        </form>
+    </div>
+    <div id="small-search-bar">
+        <form action="#" method="" id="small-search-form">
+            <input type="text" placeholder="Search a product...">
+            <button type="submit">
+                <div class="fa fa-search icon-btn"></div>
+            </button>
+        </form>
+    </div>
     <!-- NAVBAR -->
 
     <!-- JUMBOTRON -->
@@ -284,20 +279,20 @@
                             <a href="https://twitter.com" class="fa fa-twitter media-icon"></a>
                             <a href="https://ca.linkedin.com" class="fa fa-linkedin media-icon"></a>
                         </div>
-                        <hr class="h-line"/>
+                        <hr class="h-line" />
                     </div>
 
                     <div class="quick col-sm-12 col-md-4 col-lg-4 col-xl-4">
                         <span style="font-weight: bold; font-size: 20px;">QUICK LINKS</span>
                         <ul class="footer-quick-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#special-id">Special</a></li>
-                            <li><a href="#aisle-id">Aisle</a></li>
+                            <li><a href="../../index.html">Home</a></li>
+                            <li><a href="../../index.html#special-id">Special</a></li>
+                            <li><a href="../../index.html#aisle-id">Aisle</a></li>
                             <li><a href="#footer-id">FAQ</a></li>
-                            <li><a href="shopping_cart.html">Shopping Cart</a></li>
-                            <li><a href="login.html">Login</a></li>
+                            <li><a href="../../shopping_cart.html">Shopping Cart</a></li>
+                            <li><a href="../../login.html">Login</a></li>
                         </ul>
-                        <hr class="h-line"/>
+                        <hr class="h-line" />
                     </div>
 
                     <div class="newsletter col-sm-12 col-md-4 col-lg-4 col-xl-4">
@@ -334,6 +329,9 @@
 
     <!-- PRODUCT QUANTITY COUNTER-->
     <script src="../aislecounter.js"></script>
+
+    <!-- NAVBAR ANIMATION-->
+    <script src="../../navbar.js"></script>
 </body>
 
 </html>
