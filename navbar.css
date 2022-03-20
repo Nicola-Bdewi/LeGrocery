@@ -32,8 +32,8 @@
     background-color: #33eb88;
     width: 100%;
     text-align: center;
-    display: none;
-    z-index: 1000;
+    z-index: 900;
+    top: 54px;
 }
 
 #big-search-form {
@@ -72,7 +72,7 @@
     transition: 0.3s;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .navbar-icon {
         display: none;
     }
@@ -227,6 +227,7 @@
 
     .navbar-icon {
         font-size: 30px;
+        cursor: pointer;
     }
 
     #login-btn {

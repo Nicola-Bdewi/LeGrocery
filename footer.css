@@ -3,6 +3,14 @@
     list-style: none;
 }
 
+#footer-id {
+    margin-top: 500px;
+    position:static;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .top-footer-fluid {
     background-color: #232426;
     color: white;
@@ -14,7 +22,6 @@
     background-color: #0D0D0D;
     color: white;
     height: 100%;
-    padding: 0px;
 }
 
 .bottom-footer-container {
@@ -22,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0px;
 }
 
 .top-footer-container {

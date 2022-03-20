@@ -1,332 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> LEGROCERY </title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- BOOTSTRAP -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-        <!-- ICON -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- STYLESHEET -->
-        <link rel="stylesheet" type="text/css" href="navbar.css">
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="stylesheet" type="text/css" href="footer.css">
-    </head>
 
-    <body>
-        <!-- NAVBAR -->
-        <div class="header-box">
-            <nav class="navbar navbar-expand-md">
-                <!-- Brand -->
-                <a href="index.html" class="logo"><img src="Image/Logo/newlogo.png" height="70" alt="logo"/></a>
-                <div class="button-box">
-                    <!-- Toggler/collapsibe Search Button -->
-                    <button class="navbar-toggler search-icon" type="button" data-toggle="collapse"
-                        data-target="#collapsibleSearchbar">
-                        <span class="fa fa-search"></span>
-                    </button>
+<head>
+    <title> LEGROCERY </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+</head>
 
-                    <!-- Toggler/collapsibe Menu Button -->
-                    <button class="navbar-toggler bar-icon" type="button" data-toggle="collapse"
-                        data-target="#collapsibleNavbar">
-                        <span class="fa fa-bars"></span>
-                    </button>
-                </div>
-                <!-- Navbar search bar -->
-                <div class="collapse navbar-collapse menu-toggle-box" id="collapsibleSearchbar">
+<body>
+    <!-- NAVBAR -->
+    <div class="header-box">
+        <nav class="navbar navbar-expand-md">
+            <!-- Brand -->
+            <a href="index.html" class="logo"><img src="Image/Logo/newlogo.png" height="70" alt="logo" /></a>
+            <div class="button-box">
+                <!-- Toggler/collapsibe Search Button -->
+                <button class="navbar-toggler search-icon" type="button" data-toggle="collapse"
+                    data-target="#collapsibleSearchbar">
+                    <span class="fa fa-search"></span>
+                </button>
+
+                <!-- Toggler/collapsibe Menu Button -->
+                <button class="navbar-toggler bar-icon" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavbar">
+                    <span class="fa fa-bars"></span>
+                </button>
+            </div>
+            <!-- Navbar search bar -->
+            <div class="collapse navbar-collapse menu-toggle-box" id="collapsibleSearchbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <form action="#" method="" id="search-form">
+                            <input type="text" placeholder="Search a product...">
+                            <button type="submit">
+                                <div id="search-btn" class="fa fa-search icon-btn"></div>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <!-- Navbar text links -->
+            <div class="collapse navbar-collapse menu-box menu-toggle-box" id="collapsibleNavbar">
+                <div class="navbar-mbox">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <form action="#" method="" id="search-form">
-                                <input type="text" placeholder="Search a product...">
-                                <button type="submit">
-                                    <div id="search-btn" class="fa fa-search icon-btn"></div>
-                                </button>
-                            </form>
+                        <li class="nav-item mbox-item">
+                            <a class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item mbox-item">
+                            <a class="nav-link" href="#special-id">SPECIAL</a>
+                        </li>
+                        <li class="nav-item mbox-item">
+                            <a class="nav-link" href="#aisle-id">AISLE</a>
+                        </li>
+                        <li class="nav-item mbox-item">
+                            <a class="nav-link" href="#footer-id">CONTACT</a>
+                        </li>
+                        <li class="nav-item mbox-item nodisplay">
+                            <a class="nav-link nodisplay" href="shopping_cart.html">CART</a>
+                        </li>
+                        <li class="nav-item mbox-item nodisplay">
+                            <a class="nav-link nodisplay" href="login.html">LOGIN</a>
                         </li>
                     </ul>
                 </div>
-                <!-- Navbar text links -->
-                <div class="collapse navbar-collapse menu-box menu-toggle-box" id="collapsibleNavbar">
-                    <div class="navbar-mbox">
-                        <ul class="navbar-nav">
-                            <li class="nav-item mbox-item">
-                                <a class="nav-link" href="index.html">HOME</a>
-                            </li>
-                            <li class="nav-item mbox-item">
-                                <a class="nav-link" href="#special-id">SPECIAL</a>
-                            </li>
-                            <li class="nav-item mbox-item">
-                                <a class="nav-link" href="#aisle-id">AISLE</a>
-                            </li>
-                            <li class="nav-item mbox-item">
-                                <a class="nav-link" href="#footer-id">CONTACT</a>
-                            </li>
-                            <li class="nav-item mbox-item nodisplay">
-                                <a class="nav-link nodisplay" href="shopping_cart.html">CART</a>
-                            </li>
-                            <li class="nav-item mbox-item nodisplay">
-                                <a class="nav-link nodisplay" href="login.html">LOGIN</a>
-                            </li>
-                        </ul>
-                    </div>
+            </div>
+            <!-- Navbar icon links -->
+            <div class="collapse navbar-collapse  icon-box" id="collapsibleNavbar">
+                <div class="navbar-rbox">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link navbar-icon" id="big-search-btn" onclick="searchclick()">
+                                <div class="fa fa-search icon-btn" id="big-search-btn-c"></div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-icon" href="shopping_cart.html">
+                                <div id="cart-btn" class="fa fa-shopping-cart icon-btn"></div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-icon" href="login.html">
+                                <div id="login-btn" class="fa fa-user icon-btn"></div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- Navbar icon links -->
-                <div class="collapse navbar-collapse  icon-box" id="collapsibleNavbar">
-                    <div class="navbar-rbox">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link navbar-icon" id="big-search-btn">
-                                    <div class="fa fa-search icon-btn"></div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link navbar-icon" href="shopping_cart.html">
-                                    <div id="cart-btn" class="fa fa-shopping-cart icon-btn"></div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link navbar-icon" href="login.html">
-                                    <div id="login-btn" class="fa fa-user icon-btn"></div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div class=nav-spacer></div>
-        <div id="big-search-bar">
-            <form action="#" method="" id="big-search-form">
-                <input type="text" placeholder="Search a product...">
-                <button type="submit">
-                    <div class="fa fa-search icon-btn"></div>
-                </button>
-            </form>
-        </div>
-        <!-- NAVBAR -->
+            </div>
+        </nav>
+    </div>
+    <div class=nav-spacer></div>
+    <div id="big-search-bar">
+        <form action="#" method="" id="big-search-form">
+            <input type="text" placeholder="Search a product...">
+            <button type="submit">
+                <div class="fa fa-search icon-btn"></div>
+            </button>
+        </form>
+    </div>
+    <!-- NAVBAR -->
 
-        <!-- JUMBOTRON -->
-        <section id="special-id"></section>
+    <!-- JUMBOTRON -->
+    <section id="special-id"></section>
+    <div class="big-box">
+        <div class="container-fluid text-center">
+            <h1 class="font-weight-bold big-box-text">TODAY'S SPECIALS</h1>
+        </div>
+    </div>
+    <!-- JUMBOTRON -->
+
+    <!-- SPECIAL SLIDER -->
+    <div id="slides" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner ">
+            <div class="carousel-item active">
+                <div class="container padding">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 slider-image">
+                            <img src="Image/Slider/pepper.png" style='height: 100%; width: 100%; object-fit: contain'
+                                alt="slider" />
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 slider-text">
+                            <div class="slider-text-m">
+                                <div class="slider-text-c">
+                                    <div class="font-weight-bold">20% OFF</div>
+                                    <button class="slider-shop-btn">SHOP NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container padding">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 slider-image">
+                            <img src="Image/Slider/fanta.jpg" style='height: 100%; width: 100%; object-fit: contain'
+                                alt="slider" />
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 slider-text">
+                            <div class="slider-text-m">
+                                <div class="slider-text-c">
+                                    <div class="font-weight-bold">20% OFF</div>
+                                    <button class="slider-shop-btn">SHOP NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev left-rigt-control" href="#slides" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next left-rigt-control" href="#slides" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    <!-- SPECIAL SLIDER -->
+
+    <!-- JUMBOTRON -->
+    <section id="aisle-id">
         <div class="big-box">
             <div class="container-fluid text-center">
-                <h1 class="font-weight-bold big-box-text">TODAY'S SPECIALS</h1>
+                <h1 class="font-weight-bold big-box-text">OUR AISLES</h1>
             </div>
         </div>
-        <!-- JUMBOTRON -->
+    </section>
+    <!-- JUMBOTRON -->
 
-        <!-- SPECIAL SLIDER -->
-        <div id="slides" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner ">
-                <div class="carousel-item active">
-                    <div class="container padding">
-                        <div class="row">
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 slider-image">
-                                <img src="Image/Slider/pepper.png" style='height: 100%; width: 100%; object-fit: contain' alt="slider"/>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 slider-text">
-                                <div class="slider-text-m">
-                                    <div class="slider-text-c">
-                                        <div class="font-weight-bold">20% OFF</div>
-                                        <button class="slider-shop-btn">SHOP NOW</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container padding">
-                        <div class="row">
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 slider-image">
-                                <img src="Image/Slider/fanta.jpg" style='height: 100%; width: 100%; object-fit: contain' alt="slider"/>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 slider-text">
-                                <div class="slider-text-m">
-                                    <div class="slider-text-c">
-                                        <div class="font-weight-bold">20% OFF</div>
-                                        <button class="slider-shop-btn">SHOP NOW</button>
-                                    </div>
-                                </div>
-                            </div>
+    <!-- AISLE -->
+    <div class="container">
+        <div class="row padding">
+            <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
+                <div class="container">
+                    <div class="card">
+                        <a href="Aisle/FruitsAndVegetables/fruits_vegetables.html"><img class="card-img-top"
+                                src="Image/Category/vegetable.jpg" alt="Card image"></a>
+                        <div class="card-body">
+                            <h4 class="card-title">Fruits & Vegetables</h4>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev left-rigt-control" href="#slides" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next left-rigt-control" href="#slides" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-        <!-- SPECIAL SLIDER -->
-
-        <!-- JUMBOTRON -->
-        <section id="aisle-id">
-            <div class="big-box">
-                <div class="container-fluid text-center">
-                    <h1 class="font-weight-bold big-box-text">OUR AISLES</h1>
+            <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
+                <div class="container">
+                    <div class="card">
+                        <a href="Aisle/Bakery/bakery.html"><img class="card-img-top" src="Image/Category/bakery.jpg"
+                                alt="Card image"></a>
+                        <div class="card-body">
+                            <h4 class="card-title">Bread & Bakery</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!-- JUMBOTRON -->
-
-        <!-- AISLE -->
-        <div class="container">
-            <div class="row padding">
-                <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
-                    <div class="container">
-                        <div class="card">
-                            <a href="Aisle/FruitsAndVegetables/fruits_vegetables.html"><img class="card-img-top"
-                                    src="Image/Category/vegetable.jpg" alt="Card image"></a>
-                            <div class="card-body">
-                                <h4 class="card-title">Fruits & Vegetables</h4>
-                            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
+                <div class="container">
+                    <div class="card">
+                        <a href="Aisle/Beverage/beverage.html"><img class="card-img-top"
+                                src="Image/Category/beverage.jpg" alt="Card image"></a>
+                        <div class="card-body">
+                            <h4 class="card-title">Beverage</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
-                    <div class="container">
-                        <div class="card">
-                            <a href="Aisle/Bakery/bakery.html"><img class="card-img-top" src="Image/Category/bakery.jpg"
-                                    alt="Card image"></a>
-                            <div class="card-body">
-                                <h4 class="card-title">Bread & Bakery</h4>
-                            </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
+                <div class="container">
+                    <div class="card">
+                        <a href="Aisle/Meat/meat.html"><img class="card-img-top" src="Image/Category/meat.jpg"
+                                alt="Card image"></a>
+                        <div class="card-body">
+                            <h4 class="card-title">Meat & Seafood</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
-                    <div class="container">
-                        <div class="card">
-                            <a href="Aisle/Beverage/beverage.html"><img class="card-img-top"
-                                    src="Image/Category/beverage.jpg" alt="Card image"></a>
-                            <div class="card-body">
-                                <h4 class="card-title">Beverage</h4>
-                            </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
+                <div class="container">
+                    <div class="card">
+                        <a href="Aisle/Snacks/snacks.html"><img class="card-img-top" src="Image/Category/snack.jpg"
+                                alt="Card image"></a>
+                        <div class="card-body">
+                            <h4 class="card-title">Snacks</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
-                    <div class="container">
-                        <div class="card">
-                            <a href="Aisle/Meat/meat.html"><img class="card-img-top" src="Image/Category/meat.jpg"
-                                    alt="Card image"></a>
-                            <div class="card-body">
-                                <h4 class="card-title">Meat & Seafood</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
-                    <div class="container">
-                        <div class="card">
-                            <a href="Aisle/Snacks/snacks.html"><img class="card-img-top" src="Image/Category/snack.jpg"
-                                    alt="Card image"></a>
-                            <div class="card-body">
-                                <h4 class="card-title">Snacks</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
-                    <div class="container">
-                        <div class="card">
-                            <a href="Aisle/Pantry/Pantry.html"><img class="card-img-top" src="Image/Category/pantry.jpg"
-                                    alt="Card image"></a>
-                            <div class="card-body">
-                                <h4 class="card-title">Pantry Item</h4>
-                            </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
+                <div class="container">
+                    <div class="card">
+                        <a href="Aisle/Pantry/Pantry.html"><img class="card-img-top" src="Image/Category/pantry.jpg"
+                                alt="Card image"></a>
+                        <div class="card-body">
+                            <h4 class="card-title">Pantry Item</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- AISLE -->
+    </div>
+    <!-- AISLE -->
 
-        <!-- FOOTER -->
-        <footer id="footer-id">
-            <div class="container-fluid top-footer-fluid">
-                <div class="container top-footer-container">
-                    <div class="row">
-                        <div class="information col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                            <div class="contact">
-                                <span style="font-weight: bold; font-size: 20px;">CONTACT US</span> <br>
-                                <button id="call-us" class="contact-btn">Call Us</button> <br>
-                                <button id="email-us" class="contact-btn">Email Us</button> <br>
-                                <button id="visit-us" class="contact-btn">Visit Us</button>
-                            </div>
-                            <div class="follow">
-                                <span style="font-weight: bold; font-size: 20px;">FOLLOW US</span> <br>
-                                <a href="https://www.facebook.com" class="fa fa-facebook media-icon"></a>
-                                <a href="https://www.instagram.com" class="fa fa-instagram media-icon"></a>
-                                <a href="https://twitter.com" class="fa fa-twitter media-icon"></a>
-                                <a href="https://ca.linkedin.com" class="fa fa-linkedin media-icon"></a>
-                            </div>
-                            <hr class="h-line"/>
+    <!-- FOOTER -->
+    <footer id="footer-id">
+        <div class="container-fluid top-footer-fluid">
+            <div class="container top-footer-container">
+                <div class="row">
+                    <div class="information col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="contact">
+                            <span style="font-weight: bold; font-size: 20px;">CONTACT US</span> <br>
+                            <button id="call-us" class="contact-btn">Call Us</button> <br>
+                            <button id="email-us" class="contact-btn">Email Us</button> <br>
+                            <button id="visit-us" class="contact-btn">Visit Us</button>
                         </div>
-
-                        <div class="quick col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                            <span style="font-weight: bold; font-size: 20px;">QUICK LINKS</span>
-                            <ul class="footer-quick-links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="#special-id">Special</a></li>
-                                <li><a href="#aisle-id">Aisle</a></li>
-                                <li><a href="#footer-id">FAQ</a></li>
-                                <li><a href="shopping_cart.html">Shopping Cart</a></li>
-                                <li><a href="login.html">Login</a></li>
-                            </ul>
-                            <hr class="h-line"/>
+                        <div class="follow">
+                            <span style="font-weight: bold; font-size: 20px;">FOLLOW US</span> <br>
+                            <a href="https://www.facebook.com" class="fa fa-facebook media-icon"></a>
+                            <a href="https://www.instagram.com" class="fa fa-instagram media-icon"></a>
+                            <a href="https://twitter.com" class="fa fa-twitter media-icon"></a>
+                            <a href="https://ca.linkedin.com" class="fa fa-linkedin media-icon"></a>
                         </div>
+                        <hr class="h-line" />
+                    </div>
 
-                        <div class="newsletter col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                            <div class="subscribe">
-                                <span style="font-weight: bold; font-size: 20px;">SUBSCRIBE TO OUR NEWSLETTER</span>
-                                <form class="" action="">
-                                    <input class="form-control" type="text" placeholder="example@mail.com">
-                                    <button id="sub-btn" class="btn btn-success" type="submit">Subscribe</button>
-                                </form>
-                            </div>
-                            <div class="payment">
-                                <i class="fa fa-cc-amex"></i>
-                                <i class="fa fa-cc-mastercard"></i>
-                                <i class="fa fa-cc-visa"></i>
-                                <i class="fa fa-cc-paypal"></i>
-                                <i class="fa fa-credit-card"></i>
-                            </div>
+                    <div class="quick col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <span style="font-weight: bold; font-size: 20px;">QUICK LINKS</span>
+                        <ul class="footer-quick-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#special-id">Special</a></li>
+                            <li><a href="#aisle-id">Aisle</a></li>
+                            <li><a href="#footer-id">FAQ</a></li>
+                            <li><a href="shopping_cart.html">Shopping Cart</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                        <hr class="h-line" />
+                    </div>
+
+                    <div class="newsletter col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="subscribe">
+                            <span style="font-weight: bold; font-size: 20px;">SUBSCRIBE TO OUR NEWSLETTER</span>
+                            <form class="" action="">
+                                <input class="form-control" type="text" placeholder="example@mail.com">
+                                <button id="sub-btn" class="btn btn-success" type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                        <div class="payment">
+                            <i class="fa fa-cc-amex"></i>
+                            <i class="fa fa-cc-mastercard"></i>
+                            <i class="fa fa-cc-visa"></i>
+                            <i class="fa fa-cc-paypal"></i>
+                            <i class="fa fa-credit-card"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container-fluid bottom-footer-fluid">
-                <div class="container bottom-footer-container">
-                    &copy; LeGrocery Inc. | All Rights Reserved
-                </div>
+        </div>
+        <div class="container-fluid bottom-footer-fluid">
+            <div class="container bottom-footer-container">
+                &copy; LeGrocery Inc. | All Rights Reserved
             </div>
-        </footer>
-        <!-- FOOTER -->
+        </div>
+    </footer>
+    <!-- FOOTER -->
 
-        <!-- BOOTSTRAP -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- JS -->
-        <script>
-            var BigSearchBar = document.getElementById("big-search-bar");
-            var BigSearchBtn = document.getElementById("big-search-btn");
-            var BigSearchForm = document.getElementById("big-search-form");
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
-            BigSearchBtn.onclick = function() {
-                BigSearchBar.style.display = "block";
+    <!-- JS -->
+    <script>
+        var BigSearchBar = document.getElementById("big-search-bar");
+        var BigSearchBtn = document.getElementById("big-search-btn");
+        var BigSearchBtnc = document.getElementById("big-search-btn-c");
+        var BigSearchForm = document.getElementById("big-search-form");
+        var alreadyclicked = false;
+
+        function slowhide() {
+            bigtop = BigSearchBar.offsetTop;
+            if (bigtop > 54) {
+                BigSearchBar.style.top = (bigtop - 1) + "px";
+                setTimeout(slowhide, 1);
             }
+        }
 
-            window.addEventListener('mouseup', function(){
-                if (event.target != BigSearchBar && event.target.parentNode != BigSearchBar && event.target.parentNode != BigSearchForm) {
-                    BigSearchBar.style.display = "none";
+        function slowshow() {
+            bigtop = BigSearchBar.offsetTop;
+            if (bigtop < 100) {
+                BigSearchBar.style.top = (bigtop + 1) + "px";
+                setTimeout(slowshow, 1);
+            }
+        }
+
+        function searchclick() {
+            if (!alreadyclicked) {
+                slowshow();
+                alreadyclicked = true;
+            }
+            else {
+                slowhide();
+                alreadyclicked = false;
+            }
+        }
+
+        document.addEventListener('mouseup', function () {
+            if (event.target != BigSearchBtn && 
+                event.target != BigSearchBtnc && 
+                event.target != BigSearchBar && 
+                event.target.parentNode != BigSearchBar && 
+                event.target.parentNode != BigSearchForm) {
+                if (alreadyclicked) {
+                    slowhide();
+                    alreadyclicked = false;
                 }
-            })
+            }
+        })
+    </script>
+</body>
 
-        </script>
-    </body>
 </html>
