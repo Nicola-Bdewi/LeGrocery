@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Shopping Cart</title>
     <!-- Required meta tags -->
@@ -14,8 +15,15 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="shopping_cart.css">
 </head>
+
+<body>
+
+    
+        
   
-  <body>
+
+
+
     <!-- NAVBAR -->
     <div class="header-box">
         <nav class="navbar navbar-expand-md">
@@ -55,10 +63,10 @@
                             <a class="nav-link" href="index.html">HOME</a>
                         </li>
                         <li class="nav-item mbox-item">
-                            <a class="nav-link" href="#special-id">SPECIAL</a>
+                            <a class="nav-link" href="index.html#special-id">SPECIAL</a>
                         </li>
                         <li class="nav-item mbox-item">
-                            <a class="nav-link" href="#aisle-id">AISLE</a>
+                            <a class="nav-link" href="index.html#aisle-id">AISLE</a>
                         </li>
                         <li class="nav-item mbox-item">
                             <a class="nav-link" href="#footer-id">CONTACT</a>
@@ -96,14 +104,15 @@
             </div>
         </nav>
     </div>
-    <div class=nav-spacer></div>
+    <div class="nav-spacer"></div>
     <!-- NAVBAR -->
 
-        <!-- shopping cart-->
-        
-            <div class="cart">
-                <h1>Shopping Cart</h1>
-                <div class="table-responsive">
+    <!-- shopping cart-->
+
+    <div class="cart">
+        <h1>Shopping Cart</h1>
+        <div class="row">
+            <div class="table-responsive-md col-md-9">
                 <table class="table">
                     <thead class="thread-light">
                         <tr>
@@ -111,28 +120,37 @@
                             <th scope="col">Item</th>
                             <th scope="col">Description</th>
                             <th scope="col">Quantity</th>
+                            <th scope="col">Price/Unit</th>
                             <th scope="col">Price</th>
                             <th scope="col"></th>
                         </tr>
-                    </thread>
+                        </thread>
 
                     <!--Item 1 -->
                     <tbody>
                         <tr>
                             <th class="align-middle" scope="row">1</th>
-                            <td class="align-middle"><img src="Image/Bakery/baguetteImage.jpg" alt="baguette" class="cart-images"></td>
+                            <td class="align-middle"><img src="Image/Bakery/baguetteImage.jpg" alt="baguette"
+                                    class="cart-images"></td>
                             <td class="align-middle">Baguette Loaf</td>
                             <td class="align-middle">
                                 <form action="" class="add-quantity">
                                     <div class="quantity-btn">
-                                        <button type="button" class="fa fa-minus plus-minus align-middle"></button>
-                                        <input class="align-middle" type="number" value="1" min="1" max="10" id="quantity-box" style="text-align: center;">
-                                        <button type="button" class="fa fa-plus plus-minus align-middle"></button>
+                                       
+                                        <button type="button" class="fa fa-minus plus-minus" id = "minus"></button>
+                                        <input type="number" value="1" min="1" max="10" id="quantity-box">
+                                        <button type="button" class="fa fa-plus plus-minus" id = "plus"></button>
+
+
+
+
                                     </div>
                                 </form>
                             </td>
-                            <td class="align-middle">3.99$</td>
-                            <td class="align-middle"><button type="button" class="btn-close" aria-label="Close">X</button></td>
+                            <td class="align-middle ">3.99</td>
+                            <td class="align-middle cart-item-price">6.98</td>
+                            <td class="align-middle"><button type="button" class="btn-close"
+                                    aria-label="Close">X</button></td>
                         </tr>
                     </tbody>
 
@@ -140,19 +158,24 @@
                     <tbody>
                         <tr>
                             <th class="align-middle" scope="row">2</th>
-                            <td class="align-middle"><img src="Image/Bakery/croissantImage.jpg" alt="croissant" class="cart-images"></td>
+                            <td class="align-middle"><img src="Image/Bakery/croissantImage.jpg" alt="croissant"
+                                    class="cart-images"></td>
                             <td class="align-middle">Croissant</td>
                             <td class="align-middle">
                                 <form action="" class="add-quantity">
                                     <div class="quantity-btn">
-                                        <button type="button" class="fa fa-minus plus-minus align-middle"></button>
-                                        <input class="align-middle" type="number" value="1" min="1" max="10" id="quantity-box" style="text-align: center;">
-                                        <button type="button" class="fa fa-plus plus-minus align-middle"></button>
+
+                                        <button type="button" class="fa fa-minus plus-minus" id = "minus"></button>
+                                        <input type="number" value="1" min="1" max="10" id="quantity-box2">
+                                        <button type="button" class="fa fa-plus plus-minus" id = "plus"></button>
+                                    
                                     </div>
                                 </form>
                             </td>
-                            <td class="align-middle">4.99$</td>
-                            <td class="align-middle"><button type="button" class="btn-close" aria-label="Close">X</button></td>
+                            <td class="align-middle ">4.99</td>
+                            <td class="align-middle cart-item-price">4.99</td>
+                            <td class="align-middle"><button type="button" class="btn-close"
+                                    aria-label="Close">X</button></td>
                         </tr>
                     </tbody>
 
@@ -160,29 +183,49 @@
                     <tbody>
                         <tr>
                             <th class="align-middle" scope="row">3</th>
-                            <td class="align-middle"><img src="Image/Bakery/chocoCroissantImage.png" alt="Chocolate Croissant" class="cart-images"></td>
+                            <td class="align-middle"><img src="Image/Bakery/chocoCroissantImage.png"
+                                    alt="Chocolate Croissant" class="cart-images"></td>
                             <td class="align-middle">Chocolate Croissant</td>
                             <td class="align-middle">
                                 <form action="" class="add-quantity">
                                     <div class="quantity-btn">
-                                        <button type="button" class="fa fa-minus plus-minus align-middle"></button>
-                                        <input class="align-middle" type="number" value="1" min="1" max="10" id="quantity-box" style="text-align: center;">
-                                        <button type="button" class="fa fa-plus plus-minus align-middle"></button>
+                                        <button type="button" class="fa fa-minus plus-minus" id = "minus"></button>
+                                        <input type="number" value="1" min="1" max="10" id="quantity-box3">
+                                        <button type="button" class="fa fa-plus plus-minus" id = "plus"></button>
                                     </div>
                                 </form>
                             </td>
-                            <td class="align-middle">4.99$</td>
-                            <td class="align-middle"><button type="button" class="btn-close" aria-label="Close">X</button></td>
+                            <td class="align-middle ">4.99</td>
+                            <td class="align-middle cart-item-price">4.99</td>
+                            <td class="align-middle"><button type="button" class="btn-close"
+                                    aria-label="Close">X</button></td>
                         </tr>
                     </tbody>
 
+
+                </table>
+            </div>
+            <div class="table-responsive col-md-3">
+                <table class="table-dark cart-total">
+                    <tbody>
+                        <tr>
+                            <th class="align-middle" scope="row"></th>
+                            <th class="align-middle" scope="row"></th>
+                            <th class="align-middle" scope="row"></th>
+                            <th class="align-middle" scope="row">Total Items:</th>
+                            <th class="align-middle" scope="row"></th>
+                            <th class="align-middle" scope="row" id="cart-total-items">3</th>
+                        </tr>
+                    </tbody>
+                
                     <tbody>
                         <tr>
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row">Subtotal:</th>
-                            <th class="align-middle subtotal" scope="row">13.97$</th>    
+                            <th class="align-middle" scope="row"></th>
+                            <th class="align-middle subtotal" scope="row" id="cart-subtotal">13.97</th>
                         </tr>
                     </tbody>
 
@@ -191,8 +234,9 @@
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row"></th>
-                            <th class="align-middle" scope="row">tax:</th>
-                            <th class="align-middle tax" scope="row">2.10$</th>    
+                            <th class="align-middle" scope="row">GST:</th>
+                            <th class="align-middle" scope="row"></th>
+                            <th class="align-middle tax" scope="row" id="cart-gst">0.70</th>
                         </tr>
                     </tbody>
 
@@ -201,8 +245,9 @@
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row"></th>
-                            <th class="align-middle" scope="row">Shipping:</th>
-                            <th class="align-middle shipping" scope="row">5.00$</th>    
+                            <th class="align-middle" scope="row">QST:</th>
+                            <th class="align-middle" scope="row"></th>
+                            <th class="align-middle tax" scope="row" id="cart-qst">1.40</th>
                         </tr>
                     </tbody>
 
@@ -212,7 +257,8 @@
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row">Total:</th>
-                            <th class="align-middle total" scope="row">21.07$</th>    
+                            <th class="align-middle" scope="row"></th>
+                            <th class="align-middle total" scope="row" id="cart-total">16.07</th>
                         </tr>
                     </tbody>
 
@@ -223,15 +269,16 @@
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row"></th>
-                            <td class="align-middle"><button type="button" class="btn-checkout" aria-label="Checkout">Checkout</button></td> 
+                            <td class="align-middle"><button type="button" class="btn-checkout" onclick="updateCart()"
+                                    aria-label="Checkout">Checkout</button></td>
                         </tr>
                     </tbody>
-                    
                 </table>
             </div>
         </div>
-        
-        <!-- FOOTER -->
+    </div>
+
+    <!-- FOOTER -->
     <footer id="footer-id">
         <div class="container-fluid padding bg-dark text-white">
             <div class="row text-center">
@@ -240,7 +287,7 @@
                     <h4>SUBSCRIBE TO OUR NEWSLETTER!</h4>
                     <form class="" action="">
                         <input class="form-control" type="text" placeholder="example@mail.com">
-                        <button id = "sub-btn" class="btn btn-success" type="submit">Subscribe</button>
+                        <button id="sub-btn" class="btn btn-success" type="submit">Subscribe</button>
                     </form>
                 </div>
 
@@ -273,11 +320,19 @@
         </div>
     </footer>
     <!-- FOOTER -->
-      
+
     <!-- Optional JavaScript -->
+    <script src="cart.js" ></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
