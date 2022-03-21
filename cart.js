@@ -1,10 +1,14 @@
+let count1 = document.getElementById("quantity-box-1");
+let count2 = document.getElementById("quantity-box-2");
+let count3 = document.getElementById("quantity-box-3");
+
 let Price1 = document.getElementById("price-1");
 let Price2 = document.getElementById("price-2");
 let Price3 = document.getElementById("price-3");
 
-let count1 = document.getElementById("quantity-box-1");
-let count2 = document.getElementById("quantity-box-2");
-let count3 = document.getElementById("quantity-box-3");
+let CartPrice1 = document.getElementById('cart-item-price1');
+let CartPrice2 = document.getElementById('cart-item-price2');
+let CartPrice3 = document.getElementById('cart-item-price3');
 
 let Total_Items = document.getElementById('cart-total-items');
 let Cart_Subtotal = document.getElementById('cart-subtotal');
@@ -16,6 +20,28 @@ var SubTotal = 0.00;
 var GST = 0.00;
 var QST = 0.00;
 var FinalTotal = 0.00;
+var Price = 0.00;
+
+function PriceItem1(){
+	total = (parseFloat(count1.value) * (parseFloat(Price1.textContent)));
+	total = total.toFixed(2);
+	CartPrice1.textContent = total;
+	Price= total;
+}
+
+function PriceItem2(){
+	total = (parseFloat(count2.value) * (parseFloat(Price2.textContent)));
+	total = total.toFixed(2);
+	CartPrice2.textContent = total;
+	Price= total;
+}
+
+function PriceItem3(){
+	total = (parseFloat(count3.value) * (parseFloat(Price3.textContent)));
+	total = total.toFixed(2);
+	CartPrice3.textContent = total;
+	Price= total;
+}
 
 function TotalItem() {
 	total = parseInt(count1.value) + parseInt(count2.value) + parseInt(count3.value);
@@ -50,6 +76,9 @@ function update() {
 	gst();
 	qst();
 	finaltotal();
+	PriceItem1();
+	PriceItem2();
+	PriceItem3();
 }
 
 function counter(obj, id, increment) {
@@ -66,4 +95,8 @@ function counter(obj, id, increment) {
 			update();
 		}
 	}
+}
+
+function checkout(){
+	alert("Thank you for your order, we will get it to you soon!");
 }

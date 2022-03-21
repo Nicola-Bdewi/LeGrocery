@@ -1,7 +1,7 @@
 let minus = document.getElementById("minus");
 let plus = document.getElementById("plus");
 let count = document.getElementById("quantity-box");
-let data = new Number(localStorage.getItem("counter")); // for not losing the counts after refreshing and pressing + or -
+let data = new Number(sessionStorage.getItem("counter")); // for not losing the counts after refreshing and pressing + or -
 let conf = false;
 let price = document.getElementById("price");
 var numberString = price.textContent;
@@ -18,8 +18,8 @@ function counterOfMinus(){
 	}
 	data = data - 1;
 	count.value = data;
-	localStorage.setItem("counter",data);
-	localStorage.setItem("price", (Math.round(data*x * 100) / 100).toFixed(2));
+	sessionStorage.setItem("counter",data);
+	sessionStorage.setItem("price", (Math.round(data*x * 100) / 100).toFixed(2));
 	price.textContent = (Math.round(data*x * 100) / 100).toFixed(2);
 }
 
@@ -37,24 +37,23 @@ function counterOfPlus(){
 
 	data = data + 1;
 	count.value = data;
-	localStorage.setItem("counter",data);
-	localStorage.setItem("price", (Math.round(data*x * 100)/100).toFixed(2)); // The price should br just two decimals after the point.
+	sessionStorage.setItem("counter",data);
+	sessionStorage.setItem("price", (Math.round(data*x * 100)/100).toFixed(2)); // The price should br just two decimals after the point.
     price.textContent = (Math.round(data*x*100) / 100).toFixed(2);
 
 }
 
-price.textContent=localStorage.getItem("price");
-count.value = localStorage.getItem("counter");
+price.textContent=sessionStorage.getItem("price");
+count.value = sessionStorage.getItem("counter");
 
 function resetEverything(){
 
 /* 
-	This function delete the localstorage.
-
+	This function delete the sessionStorage.
 */
-	window.localStorage.clear();
-	count.value = localStorage.setItem("counter",1);
-	price.textContent=localStorage.setItem("price",initialPrice);
+	window.sessionStorage.clear();
+	count.value = sessionStorage.setItem("counter",1);
+	price.textContent=sessionStorage.setItem("price",initialPrice);
 	location.reload();
 }
 

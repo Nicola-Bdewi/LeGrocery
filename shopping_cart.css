@@ -1,8 +1,8 @@
 .cart{
-    
+    width: 99%;
     background-color: #33eb88;
     border: 1px solid black ;
-    border-radius: 10px;
+    
 }
 
 .items-cart .info-cart .quantity-cart .price-cart{
@@ -30,4 +30,9 @@
     border-style: solid;
     border-color: white;
     border-width: 1px;
+    float:right;
+}
+
+.unit-prices{
+    display: none;
 }

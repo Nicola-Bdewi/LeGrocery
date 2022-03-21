@@ -41,10 +41,10 @@
                             <a class="nav-link" href="index.html">HOME</a>
                         </li>
                         <li class="nav-item mbox-item">
-                            <a class="nav-link" href="#special-id">SPECIAL</a>
+                            <a class="nav-link" href="index.html#special-id">SPECIAL</a>
                         </li>
                         <li class="nav-item mbox-item">
-                            <a class="nav-link" href="#aisle-id">AISLE</a>
+                            <a class="nav-link" href="index.html#aisle-id">AISLE</a>
                         </li>
                         <li class="nav-item mbox-item">
                             <a class="nav-link" href="#footer-id">CONTACT</a>
@@ -116,7 +116,7 @@
                             <th scope="col">Item</th>
                             <th scope="col">Description</th>
                             <th scope="col">Quantity</th>
-                            <th scope="col">Price/Unit</th>
+                            <th class="unit-prices" scope="col">Price/Unit</th>
                             <th scope="col">Price</th>
                             <th scope="col"></th>
                         </tr>
@@ -143,10 +143,10 @@
                                     </div>
                                 </form>
                             </td>
-                            <td class="align-middle" id="price-1">3.99</td>
-                            <td class="align-middle cart-item-price">6.98</td>
-                            <td class="align-middle"><button type="button" class="btn-close"
-                                    aria-label="Close">X</button></td>
+                            <td class="align-middle unit-prices" id="price-1">3.99</td>
+                            <td class="align-middle" id="cart-item-price1">3.99</td>
+                            <!-- <td class="align-middle"><button type="button" class="btn-close"
+                                    aria-label="Close">X</button></td> -->
                         </tr>
                     </tbody>
 
@@ -168,17 +168,17 @@
                                     </div>
                                 </form>
                             </td>
-                            <td class="align-middle " id="price-2">4.99</td>
-                            <td class="align-middle cart-item-price">4.99</td>
-                            <td class="align-middle"><button type="button" class="btn-close"
-                                    aria-label="Close">X</button></td>
+                            <td class="align-middle unit-prices" id="price-2">4.99</td>
+                            <td class="align-middle" id="cart-item-price2">4.99</td>
+                            <!--<td class="align-middle"><button type="button" class="btn-close"
+                                    aria-label="Close">X</button></td> -->
                         </tr>
                     </tbody>
 
                     <!--Item 3 -->
                     <tbody>
                         <tr>
-                            <th class="align-middle" scope="row">3</th>
+                            <th class="align-middle " scope="row">3</th>
                             <td class="align-middle"><img src="Image/Bakery/chocoCroissantImage.png"
                                     alt="Chocolate Croissant" class="cart-images"></td>
                             <td class="align-middle">Chocolate Croissant</td>
@@ -191,13 +191,12 @@
                                     </div>
                                 </form>
                             </td>
-                            <td class="align-middle " id="price-3">4.99</td>
-                            <td class="align-middle cart-item-price">4.99</td>
-                            <td class="align-middle"><button type="button" class="btn-close"
-                                    aria-label="Close">X</button></td>
+                            <td class="align-middle unit-prices" id="price-3">4.99</td>
+                            <td class="align-middle" id="cart-item-price3">4.99</td>
+                            <!-- <td class="align-middle"><button type="button" class="btn-close"
+                                    aria-label="Close">X</button></td> -->
                         </tr>
                     </tbody>
-
 
                 </table>
             </div>
@@ -265,7 +264,7 @@
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row"></th>
                             <th class="align-middle" scope="row"></th>
-                            <td class="align-middle"><button type="button" class="btn-checkout" onclick="updateCart()"
+                            <td class="align-middle"><button type="button" class="btn-checkout" onclick="checkout()"
                                     aria-label="Checkout">Checkout</button></td>
                         </tr>
                     </tbody>
