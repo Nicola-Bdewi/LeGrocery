@@ -116,12 +116,11 @@
     </div>
 
     <!-- CONTENT -->
-
     <div class="container">
         <div class="row">
 
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 image-box">
-                <img class="card-img-top" src="../../../Image/Pantry/flour.jpg"
+                <img calss="card-img-top" src="../../../Image/Pantry/flour.jpg"
                     style='height: 100%; width: 100%; object-fit: cover' /> <!-- Change Product Image Here-->
             </div>
 
@@ -138,21 +137,30 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-o"></i>
                     </p>
-                    <p>
-                    <h3 class="float-right">10$ / Bag</h3> <!-- Change Product Price Here-->
-                    </p>
-                    <p>
-                    <h3>Price:</h3>
-                    </p>
+                    <div class="m-price-box">
+                        <h3>Price:</h3>
+                        <div class="c-price-box">
+                            <h3 id="price">10.00</h3>
+                            <h3>$</h3>
+                        </div>
+                    </div>
                     <hr>
                     <form action="" class="add-quantity">
                         <div class="quantity-btn">
-                            <button type="button" class="fa fa-minus plus-minus"></button>
-                            <input type="number" value="1" min="1" max="" id="quantity-box">
-                            <button type="button" class="fa fa-plus plus-minus"></button>
+                            <button type="button" class="fa fa-minus plus-minus" id="minus"></button>
+                            <div class="m-quantity-box">
+                                <input type="number" value="1" min="1" max="10" id="quantity-box">
+                                <div class="c-quantity-box">
+                                    Bag(s)
+                                </div>
+                            </div>
+                            <button type="button" class="fa fa-plus plus-minus" id="plus"></button>
                         </div>
                         <div class="quantity-cart">
                             <a href="#" class="btn btn-primary" id=quantity-cart>Add to Cart</a>
+                        </div>
+                        <div class="reset">
+                            <button type="button" class=" btn btn-success " id="resetAll">Reset</button>
                         </div>
                     </form>
                 </div>
@@ -160,14 +168,13 @@
 
         </div>
     </div>
-
     <!-- CONTENT -->
 
     <!-- DESCRIPTION -->
     <div class="container more-description">
         <button data-toggle="collapse" data-target="#product-description">Description</button>
         <div class="collapse toggle-box" id="product-description">
-            <pre><br>All purpose flour</pre> <!-- Change Product Description Here-->
+            All purpose flour <!-- Change Product Description Here-->
         </div>
     </div>
 
@@ -185,7 +192,7 @@
         <button data-toggle="collapse" data-target="#product-rating">Rating</button>
         <div class="collapse toggle-box" id="product-rating">
             <!-- Change Product Rating Here-->
-
+            Leave a Rating.
         </div>
     </div>
 
@@ -256,6 +263,9 @@
 
     <!-- NAVBAR ANIMATION-->
     <script src="../../../navbar.js"></script>
+
+    <!-- PRODUCT QUANTITY COUNTER --> <!--change-->
+    <script src="../../productcounter.js"></script> <!--change-->
 
 </body>
 

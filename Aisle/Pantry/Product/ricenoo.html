@@ -115,59 +115,67 @@
         </div>
     </div>
 
-    <!-- CONTENT -->
+<!-- CONTENT -->
 
-    <div class="container">
-        <div class="row">
+<div class="container">
+    <div class="row">
 
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 image-box">
-                <img class="card-img-top" src="../../../Image/Pantry/ricenoo.jpg"
-                    style='height: 100%; width: 100%; object-fit: cover' /> <!-- Change Product Image Here-->
-            </div>
-
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 description-box">
-                <div class="description-cbox">
-                    <h4 class="class-title">Rice noodle</h4> <!-- Change Product Name Here-->
-                    <p>250 g</p> <!-- Change Product Quantity Here-->
-                    <p>Single Unit</p> <!-- Change Product Unit Here-->
-                    <p>
-                        <!-- Change Product Rating Here-->
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </p>
-                    <p>
-                    <h3 class="float-right">3.00$ / Bag</h3> <!-- Change Product Price Here-->
-                    </p>
-                    <p>
-                    <h3>Price:</h3>
-                    </p>
-                    <hr>
-                    <form action="" class="add-quantity">
-                        <div class="quantity-btn">
-                            <button type="button" class="fa fa-minus plus-minus"></button>
-                            <input type="number" value="1" min="1" max="" id="quantity-box">
-                            <button type="button" class="fa fa-plus plus-minus"></button>
-                        </div>
-                        <div class="quantity-cart">
-                            <a href="#" class="btn btn-primary" id=quantity-cart>Add to Cart</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 image-box">
+            <img calss="card-img-top" src="../../../Image/Pantry/ricenoo.jpg" 
+            style='height: 100%; width: 100%; object-fit: cover' />                     <!-- Change Product Image Here-->
         </div>
-    </div>
 
-    <!-- CONTENT -->
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 description-box">
+            <div class="description-cbox">
+                <h4 class="class-title">Rice noodle</h4>                                      <!-- Change Product Name Here-->
+                <p>250 g</p>                                                          <!-- Change Product Quantity Here-->
+                <p>Single Unit</p>                                                      <!-- Change Product Unit Here-->
+                <p>                                                                     <!-- Change Product Rating Here-->
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </p>
+                <div class="m-price-box">
+                    <h3>Price:</h3>
+                    <div class="c-price-box">
+                        <h3 id = "price">3.00</h3>
+                        <h3>$</h3>
+                    </div>
+                </div>
+                <hr>
+                <form action="" class="add-quantity">
+                    <div class="quantity-btn">
+                        <button type="button" class="fa fa-minus plus-minus" id = "minus"></button>
+                        <div class="m-quantity-box">
+                            <input type="number" value="1" min="1" max="10" id="quantity-box">
+                            <div class="c-quantity-box">
+                                Bag(s)
+                            </div>
+                        </div>
+                        <button type="button" class="fa fa-plus plus-minus" id = "plus"></button>
+                    </div>
+                    <div class="quantity-cart">
+                        <a href="#" class="btn btn-primary" id=quantity-cart>Add to Cart</a>
+                    </div>
+                    <div class = "reset">
+                        <button type="button" class=" btn btn-success " id="resetAll">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- CONTENT -->
 
     <!-- DESCRIPTION -->
     <div class="container more-description">
         <button data-toggle="collapse" data-target="#product-description">Description</button>
         <div class="collapse toggle-box" id="product-description">
-            <pre><br>Chinese rice noodle</pre> <!-- Change Product Description Here-->
+            Chinese rice noodle <!-- Change Product Description Here-->
         </div>
     </div>
 
@@ -186,7 +194,7 @@
         <button data-toggle="collapse" data-target="#product-rating">Rating</button>
         <div class="collapse toggle-box" id="product-rating">
             <!-- Change Product Rating Here-->
-
+            Leave a Rating.
         </div>
     </div>
 
@@ -258,6 +266,9 @@
     
     <!-- NAVBAR ANIMATION-->
     <script src="../../../navbar.js"></script>
+
+    <!-- PRODUCT QUANTITY COUNTER --> <!--change-->
+    <script src="../../productcounter.js"></script> <!--change-->
 </body>
 
 </html>
