@@ -15,158 +15,54 @@
 </head>
 
 <body>
-    <!-- SIDE BAR -->
-    <div class="navbar-box">
-        <div class="mother-box">
-            <div class="logo-box">
-                <a href="../index.html"><img id="big-logo" src="../Image/Logo/altlogo.png" alt="LOGO"
-                        style="width:200px;" /></a>
-                <a href="../index.html"><img id="small-logo" src="../Image/Logo/bag.png" alt="LOGO" style="width:50px;"
-                        title="LeGrocery" /></a>
-            </div>
-            <div class="menu-box">
-                <ul class="text-list">
-                    <li>
-                        <a href="../index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a href="ProductList.html">PRODUCT LIST</a>
-                    </li>
-                    <li>
-                        <a href="userlist.html">USER LIST</a>
-                    </li>
-                    <li>
-                        <a href="orderlist.html">ORDER LIST</a>
-                    </li>
-                </ul>
-
-                <ul class="icon-list">
-                    <li>
-                        <a href="#"><i class="fa fa-home" title="Home"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-cubes" title="Product List"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-users" title="User List"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-truck" title="Order List"></i></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="profile-box">
-                <button id="big-log-out-btn">LOG-OUT</button>
-                <button id="small-log-out-btn"><i class="fa fa-sign-out" title="Log-Out"></i></button>
-            </div>
+    <!-- SIDEBAR -->
+    <div id="sidebar">
+        <div class="logo-box">
+            <a href="#"><img id="big-logo" src="../Image/Logo/altlogo.png" alt="LOGO"
+                    style="width:150px; margin: auto;" /></a>
+        </div>
+        <div class="link-box">
+            <a href="#"><i class="fa fa-home" style="width:50px; padding-left: 7px;"></i>HOME</a>
+            <a href="ProductList.html"><i class="fa fa-cubes" style="width:50px; padding-left: 5px;"></i>PRODUCTS</a>
+            <a href="orderlist.html"><i class="fa fa-truck" style="width:50px; padding-left: 5px;"></i>ORDERS</a>
+            <a href="userlist.html"><i class="fa fa-users" style="width:50px; padding-left: 5px;"></i>USERS</a>
+            <hr style="border-color:white; width:90%; white-space: nowrap;">
+            <a href="../index.html"><i class="fa fa-globe" style="width:50px; padding-left: 5px;"></i>STORE</a>
+        </div>
+        <div class="user-box">
+            <button id="sign-out-btn">SIGN OUT</button>
         </div>
     </div>
-    <!-- SIDE BAR -->
 
-    <!-- CONTENT -->
-    <div class="wrapper">
+    <div id="wrapper">
         <div class="container-fluid">
             <div class="header-box">
-                <h2 class="font-wight-bold header-text">EDIT ORDER</h2>
-                <button id="save-order-btn"><i class="fa fa-save" title="Save order"></i></button>
-            </div>
-
-            <div class="row padding item-box">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-1 image-box">
-                    <div><a href="#"><img src="../Image/Beverage/coca_cola_2L.jpg"
-                                style="width: 50px; height: 50px; object-fit: contain;" alt="Product"/></a></div>
+                <div class="header-box-c">
+                    <button id="menu-btn" class="fa fa-bars" onclick="toggle()"></button>
+                    <span>ORDER LIST</span>
                 </div>
-                <div class="padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 id-box">
-                    <div>ID-001</div>
-                </div>
-                <div class="padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 name-box">
-                    <div><a href="#">Coca-Cola</a></div>
-                </div>
-                <div class="padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 quantity-box">
-                    <div id="box-inside-box">
-                        <button type="button" class="fa fa-minus plus-minus"></button>
-                        <div id="quantity-abs-box">
-                            <input type="number" value="1" min="1" max="10" id="input-box">
-                            <h6>Bottle(s)</h6>
-                        </div>
-                        <button type="button" class="fa fa-plus plus-minus"></button>
-                    </div>
-                </div>
-                <div class="padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 price-box">
-                    <div>$2.00</div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-1 icon-box">
-                    <div><button><i class="fa fa-trash" title="Delete"></i></button></div>
+                <div class="header-box-c">
+                    <button id="add-order-btn-s" class="fa fa-save add-btn" title="Save"></button>
+                    <button id="add-order-btn-l" class="add-btn" title="Save">Save</button>
                 </div>
             </div>
 
-            <div class="row padding item-box">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-1 image-box">
-                    <div><a href="#"><img src="../Image/Beverage/fanta_2Ljpg.jpg"
-                                style="width: 50px; height: 50px; object-fit: contain;" alt="Product"/></a></div>
-                </div>
-                <div class="padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 id-box">
-                    <div>ID-002</div>
-                </div>
-                <div class="padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 name-box">
-                    <div><a href="#">Fanta</a></div>
-                </div>
-                <div class="padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 quantity-box">
-                    <div id="box-inside-box">
-                        <button type="button" class="fa fa-minus plus-minus"></button>
-                        <div id="quantity-abs-box">
-                            <input type="number" value="1" min="1" max="10" id="input-box">
-                            <h6>Bottle(s)</h6>
-                        </div>
-                        <button type="button" class="fa fa-plus plus-minus"></button>
-                    </div>
-                </div>
-                <div class="padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 price-box">
-                    <div>$2.00</div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-1 icon-box">
-                    <div><button><i class="fa fa-trash" title="Delete"></i></button></div>
-                </div>
-            </div>
+            <!-- CONTENT -->
 
-            <div class="row padding item-box">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-1 image-box">
-                    <div><a href="#"><img src="../Image/Beverage/sprite_2L.jpg"
-                                style="width: 50px; height: 50px; object-fit: contain;" alt="Product"/></a></div>
-                </div>
-                <div class="padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 id-box">
-                    <div>ID-003</div>
-                </div>
-                <div class="padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 name-box">
-                    <div><a href="#">Sprite</a></div>
-                </div>
-                <div class="padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 quantity-box">
-                    <div id="box-inside-box">
-                        <button type="button" class="fa fa-minus plus-minus"></button>
-                        <div id="quantity-abs-box">
-                            <input type="number" value="1" min="1" max="10" id="input-box">
-                            <h6>Bottle(s)</h6>
-                        </div>
-                        <button type="button" class="fa fa-plus plus-minus"></button>
-                    </div>
-                </div>
-                <div class="padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2 price-box">
-                    <div>$2.00</div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-1 icon-box">
-                    <div><button><i class="fa fa-trash" title="Delete"></i></button></div>
-                </div>
-            </div>
+
+            <!-- CONTENT -->
 
         </div>
     </div>
-    <!-- CONTENT -->
+    <!-- SIDEBAR -->
 
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SIDEBAR JS -->
+    <script src="sidebar.js"></script>
 </body>
 
 </html>

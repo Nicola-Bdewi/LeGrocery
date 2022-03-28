@@ -1,60 +1,25 @@
-*{
-    font-family: Verdana, sans-serif;
-}
-
-.wrapper {
-    margin-left: 300px;
-}
-
-.header-box {
-    display: flex;
-    background-color: #33eb88;
-    margin: 15px 0;
+.content-box {
+    margin: 0px 15px;
+    background-color: white;
     border-radius: 5px;
-    padding: 5px 10px;
-    justify-content: space-between;
 }
 
-.header-text {
-    color: white;
-    border-radius: 5px;
-    margin: 0;
-}
-
-#add-order-btn {
-    width: 41.5px;
-    padding: 0;
-    border-color: #25a862;
-    border-style: solid;
-    border-width: thin;
-    border-radius: 5px;
-    font-size: 25px;
-    color: #33eb88;
-    transition: 0.3s;
-}
-
-#add-order-btn:hover {
-    background-color: #25a862;
-    color: white;
-    transition: 0.3s;
-}
-
-#table-body {
-    transition: 0.3s;
+.table th {
+    height: 50px;
 }
 
 #table-body tr {
-    height: 68px;
+    height: 67px;
 }
 
 #table-body tr td{
-        vertical-align: middle;
+    vertical-align: middle;
+    border-top: solid #ebecf0;
+    border-width: thin;
 }
-
 
 #table-body tr:hover {
     background-color: #33eb88;
-    transition: 0.3s;
 }
 
 .table-icon {
@@ -69,8 +34,7 @@
     border-width: thin;
     border-radius: 5px;
     font-size: 25px;
-    transition: 0.3s;
-    display: none;
+    visibility: hidden;
     border-color: #25a862;
 }
 
@@ -80,48 +44,25 @@
     border-width: thin;
     border-radius: 5px;
     font-size: 25px;
-    transition: 0.3s;
-    display: none;
+    visibility: hidden;
     border-color: #25a862;
 }
 
 #table-body tr:hover #edit-btn{
-    display: block;
-    transition: 0.3s;
+    visibility:visible;
+    
 }
 
 #table-body tr:hover #edit-btn:hover {
     background-color: #25a862;
     color: white;
-    transition: 0.3s;
 }
 
 #table-body tr:hover #delete-btn{
-    display: block;
-    transition: 0.3s;
+    visibility:visible;
 }
 
 #table-body tr:hover #delete-btn:hover{
     background-color: #25a862;
     color: white;
-    transition: 0.3s;
 }
-
-@media only screen and (max-width: 768px) {
-    .wrapper {
-        margin-left: 70px;
-    }
-
-    .header-text {
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-    }
-}
-
-@media only screen and (max-width: 576px) {
-    .no-display {
-        display: none;
-    }
-}
-

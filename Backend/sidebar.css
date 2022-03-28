@@ -1,147 +1,186 @@
-*{
-    font-family: verdana, sans-serif;
-    text-decoration: none;
-    list-style: none;
+body {
+    background-color: #ececec;
 }
 
-.navbar-box {
+#sidebar {
+    width: 0px;
     position: fixed;
-    width: 300px;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
     background-color: #33eb88;
-    display: flex;
-    justify-content: center;
-}
-
-.mother-box {
-    width: 100%;
-    margin: auto 0;
+    overflow-x: hidden;
+    transition: 0.5s;
 }
 
 .logo-box {
+    margin-left: 50px;
+    padding: 10px 0px 50px 0px;
+    white-space: nowrap;
+}
+
+.link-box a {
+    padding: 8px 8px 8px 50px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.link-box a:hover {
+    color: #25a862;
+}
+  
+#wrapper {
+    transition: margin-left .5s;
+    width: auto;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.header-box {
+    display: flex;
+    background-color: #33eb88;
+    margin: 15px;
+    justify-content: space-between;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.header-box-c {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 200px;
 }
 
-.logo-box #small-logo {
-    display: none;
-}
-
-.menu-box {
-    text-align: center;
-}
-
-.text-list {
-    margin: 0;
-    padding: 0;
-}
-
-.text-list li {
-    padding: 15px 0;
-    font-size: 20px;
-}
-
-.text-list li a{
+.header-box-c span {
+    font-size: 30px;
+    font-weight: bold;
     color: white;
-    transition: 0.3s;
+    border-left: solid white;
+    padding-left: 8px;
 }
 
-.text-list li a:hover {
-    color: #25a862;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.icon-list {
-    display: none;
-}
-
-.profile-box {
-    margin-top: 200px;
-    text-align: center;
-}
-
-.profile-box #big-log-out-btn {
-    display: inline;
-    border-style: solid;
-    border-width: thin;
+#menu-btn {
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    border: none;
     border-radius: 5px;
-    border-color: #25a862;
-    font-size: 20px;
-    background-color: white;
     color: #33eb88;
+    background-color: white;
+    font-size: 25px;
     transition: 0.3s;
 }
 
-.profile-box #big-log-out-btn:hover {
-    background-color: #25a862;
+#menu-btn:hover {
     color: white;
+    background-color: #25a862;
     transition: 0.3s;
 }
 
-.profile-box #small-log-out-btn {
+#add-order-btn-s {
     display: none;
 }
 
-@media (max-width: 768px) {
-    .navbar-box {
-        width: 70px;
-    }
+#add-order-btn-l {
+    margin: 10px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: #33eb88;
+    background-color: white;
+    font-size: 20px;
+    padding: 0px 10px;
+    transition: 0.3s;
+}
 
-    .logo-box #big-logo{
+#add-order-btn-l:hover {
+    color: white;
+    background-color: #25a862;
+    transition: 0.3s;
+}
+
+.user-box {
+    position: absolute;
+    bottom: 50px;
+    justify-self: center;
+    width: 150px;
+    height: 40px;
+    left: 50px;
+}
+
+#sign-out-btn {
+    height: 100%;
+    width: 100%;
+    border: none;
+    color: #33eb88;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#sign-out-btn:hover {
+    color: white;
+    background-color: #25a862;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 992px) {
+    #wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #add-order-btn-l {
         display: none;
     }
 
-    .logo-box #small-logo {
+    #add-order-btn-s {
         display: block;
     }
-
-    .text-list {
-        display: none;
-    }
-
-    .icon-list {
-        display: block;
-        margin: 0;
-        padding: 0;
-    }
-
-    .icon-list li a i {
-        padding: 20px 0;
-        font-size: 30px;
-        color: white;
-    }
-
-    .icon-list li a i:hover {
-        color: #25a862;
-    }
-
-    .profile-box #big-log-out-btn {
-        display: none;
-    }
-
-    .profile-box #small-log-out-btn {
-        display: inline;
-        border-style: solid;
-        border-width: thin;
+    
+    #add-order-btn-s {
+        margin: 10px;
+        height: 40px;
+        width: 40px;
+        border: none;
         border-radius: 5px;
-        border-color: #25a862;
-        font-size: 30px;
-        padding: 0;
-        width: 47px;
-        background-color: white;
         color: #33eb88;
+        background-color: white;
+        font-size: 25px;
+        transition: 0.3s;
+        padding: 0px;
+    }
+    
+    #add-order-btn-s:hover {
+        color: white;
+        background-color: #25a862;
         transition: 0.3s;
     }
+}
 
-    .profile-box #small-log-out-btn:hover {
-        background-color: #25a862;
-        color: white;
-        transition: 0.3s;
+@media screen and (max-width: 425px) {
+
+    .header-box-c span {
+        font-size: 20px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 321px) {
+
+    .header-box-c span {
+        font-size: 15px;
     }
 }

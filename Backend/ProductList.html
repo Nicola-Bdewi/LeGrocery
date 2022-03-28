@@ -11,198 +11,84 @@
     <!-- ICON -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- STYLESHEET -->
-    <link rel="stylesheet" type="text/css" href="../navbar.css">
-    <link rel="stylesheet" type="text/css" href="../footer.css">
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
 </head>
 
 <body>
-
-    <!-- NAVBAR -->
-    <div class="header-box">
-        <nav class="navbar navbar-expand-md">
-
-            <!-- Brand -->
-            <a href="../index.html" class="logo"><img src="../Image/Logo/newlogo.png" height="70"></a>
-
-            <div class="button-box">
-                <!-- Toggler/collapsibe Search Button -->
-                <button class="navbar-toggler search-icon" type="button" data-toggle="collapse"
-                    data-target="#collapsibleSearchbar">
-                    <span class="fa fa-search"></span>
-                </button>
-
-                <!-- Toggler/collapsibe Menu Button -->
-                <button class="navbar-toggler bar-icon" type="button" data-toggle="collapse"
-                    data-target="#collapsibleNavbar">
-                    <span class="fa fa-bars"></span>
-                </button>
-            </div>
-
-            <!-- Navbar search bar -->
-            <div class="collapse navbar-collapse menu-toggle-box" id="collapsibleSearchbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <form action="#" method="" id="search-form">
-                            <input type="text" placeholder="Search a product...">
-                            <button type="submit">
-                                <div id="search-btn" class="fa fa-search icon-btn"></div>
-                            </button>
-                        </form>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Navbar text links -->
-            <div class="collapse navbar-collapse menu-box menu-toggle-box" id="collapsibleNavbar">
-                <div class="navbar-mbox">
-                    <ul class="navbar-nav">
-                        <li class="nav-item mbox-item">
-                            <a class="nav-link" href="../index.html">HOME</a>
-                        </li>
-                        <li class="nav-item mbox-item">
-                            <a class="nav-link" href="../index.html#special-id">SPECIAL</a>
-                        </li>
-                        <li class="nav-item mbox-item">
-                            <a class="nav-link" href="../index.html#aisle-id">AISLE</a>
-                        </li>
-                        <li class="nav-item mbox-item">
-                            <a class="nav-link" href="#footer-id">CONTACT</a>
-                        </li>
-                        <li class="nav-item mbox-item nodisplay">
-                            <a class="nav-link nodisplay" href="#">CART</a>
-                        </li>
-                        <li class="nav-item mbox-item nodisplay">
-                            <a class="nav-link nodisplay" href="#">LOGIN</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Navbar icon links -->
-            <div class="collapse navbar-collapse  icon-box" id="collapsibleNavbar">
-                <div class="navbar-rbox">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link navbar-icon" href="#">
-                                <div id="search-btn" class="fa fa-search icon-btn"></div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link navbar-icon" href="#">
-                                <div id="cart-btn" class="fa fa-shopping-cart icon-btn"></div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link navbar-icon" href="#">
-                                <div id="login-btn" class="fa fa-user icon-btn"></div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </nav>
-    </div>
-    <div class=nav-spacer></div>
-    <!-- NAVBAR -->
-
-    <!-- OVERVIEW -->
-    <div class="container sort-box">
-        <div class="sort-box-text">
-
+    <!-- SIDEBAR -->
+    <div id="sidebar">
+        <div class="logo-box">
+            <a href="#"><img id="big-logo" src="../Image/Logo/altlogo.png" alt="LOGO"
+                    style="width:150px; margin: auto;" /></a>
+        </div>
+        <div class="link-box">
+            <a href="#"><i class="fa fa-home" style="width:50px; padding-left: 7px;"></i>HOME</a>
+            <a href="ProductList.html"><i class="fa fa-cubes" style="width:50px; padding-left: 5px;"></i>PRODUCTS</a>
+            <a href="orderlist.html"><i class="fa fa-truck" style="width:50px; padding-left: 5px;"></i>ORDERS</a>
+            <a href="userlist.html"><i class="fa fa-users" style="width:50px; padding-left: 5px;"></i>USERS</a>
+            <hr style="border-color:white; width:90%; white-space: nowrap;">
+            <a href="../index.html"><i class="fa fa-globe" style="width:50px; padding-left: 5px;"></i>STORE</a>
+        </div>
+        <div class="user-box">
+            <button id="sign-out-btn">SIGN OUT</button>
         </div>
     </div>
-<br><br><br>
-    <!-- CONTENT -->
 
-    <div class="container">
-        <div class="row">
+    <div id="wrapper">
+        <div class="container-fluid">
+            <div class="header-box">
+                <div class="header-box-c">
+                    <button id="menu-btn" class="fa fa-bars" onclick="toggle()"></button>
+                    <span style="white-space: nowrap;">PRODUCT LIST</span>
+                </div>
+                <div class="header-box-c">
+                    <a href="ProductEdit.html"><button id="add-order-btn-s" class="fa fa-plus add-btn" title="Add Product"></button></a>
+                    <a href="ProductEdit.html"><button id="add-order-btn-l" class="add-btn" title="Add Product">Add Product</button></a>
+                </div>
+            </div>
 
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 description-box">
-                <div class="description-cbox">
-                    <a href="ProductEdit.html" style="text-decoration: none; color: black;"><h1 style="margin:auto;">Product List</h1></a> <!-- REMOVE HREF-->
-                    <br><br>
-
-
-                    <div>
-
-                      <select name="products" id="products" style="height: 5%; width:100%; font-size: 10px;">
-                      <option value="" disabled selected>Select your option</option>
-                      <option value="steak">Ribeye Steak</option>
-                      <option value="Bacon">Bacon</option>
-                      <option value="Salmon">Salmon</option>
-                      <option value="Porkchop">Porkchop</option>
-                      <option value="Chicken">Chicken</option>
-                      <option value="cocacola">Cocacola</option>
-                      <option value="drpepper">Dr Pepper</option>
-                      <option value="Fanta">Fanta</option>
-                      <option value="mtndew">Mtndew</option>
-                      <option value="Sprite">Sprite</option>
-                      <option value="Rice">rice</option>
-                      </select>
-
-
+            <!-- CONTENT -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 description-box">
+                        <div class="description-cbox">
+                            <h1 style="margin:auto;">Product List</h1>
+                            <br>
+                            <div>
+                                <select name="products" id="products" style="height: 5%; width:100%; font-size: 10px;">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="steak">Ribeye Steak</option>
+                                    <option value="Bacon">Bacon</option>
+                                    <option value="Salmon">Salmon</option>
+                                    <option value="Porkchop">Porkchop</option>
+                                    <option value="Chicken">Chicken</option>
+                                    <option value="cocacola">Cocacola</option>
+                                    <option value="drpepper">Dr Pepper</option>
+                                    <option value="Fanta">Fanta</option>
+                                    <option value="mtndew">Mtndew</option>
+                                    <option value="Sprite">Sprite</option>
+                                    <option value="Rice">rice</option>
+                                </select>
+                            </div>
+                            </form>
+                        </div>
                     </div>
-
-                      </form>
-                    </div>
-
                 </div>
-            </div>
 
+            </div>
+            <!-- CONTENT -->
         </div>
     </div>
+    <!-- SIDEBAR -->
 
-
-<br>
-    <!-- FOOTER -->
-    <footer id="footer-id">
-        <div class="container-fluid bg-dark text-white">
-            <div class="row text-center">
-
-                <div class="col-12 newsletter">
-                    <h4>SUBSCRIBE TO OUR NEWSLETTER!</h4>
-                    <form class="" action="">
-                        <input class="form-control" type="text" placeholder="example@mail.com">
-<br>
-                        <button class="btn btn-success" type="submit">Subscribe</button>
-                    </form>
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-6">
-
-                    <h4>Contact Us!</h4>
-                    <hr class="hr-75">
-                    <p>1866-000-0000</p>
-                    <p>support@legrocery.ca</p>
-                    <p>1455 Boulevard Maisonneuve</p>
-                    <p>Montreal, QC, H3G 1M8</p>
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-6">
-
-                    <h4>Visit Us</h4>
-                    <hr class="hr-75">
-                    <p><a href="https://www.facebook.com" class="fa fa-facebook media-icon"></a></p>
-                    <p><a href="https://www.instagram.com" class="fa fa-instagram media-icon"></a></p>
-                    <p><a href="https://twitter.com" class="fa fa-twitter media-icon"></a></p>
-                    <p><a href="https://ca.linkedin.com" class="fa fa-linkedin media-icon"></a></p>
-                </div>
-
-                <div class="col-12">
-                    <hr class="hr-100">
-                    <h5>&copy; LeGrocery Inc. | All Rights Reserved</h5>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-    <!-- FOOTER -->
 
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SIDEBAR JS-->
+    <script src="sidebar.js"></script>
 </body>
 
 </html>
