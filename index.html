@@ -23,7 +23,8 @@
             <a href="index.html" class="logo"><img src="Image/Logo/newlogo.png" height="70" alt="logo" /></a>
             <div class="button-box">
                 <!-- Toggler/collapsibe Small Search Button -->
-                <button class="navbar-toggler search-icon" type="button" id="small-search-btn" onclick="smallsearchclick()">
+                <button class="navbar-toggler search-icon" type="button" id="small-search-btn"
+                    onclick="smallsearchclick()">
                     <span class="fa fa-search" id="small-search-btn-c"></span>
                 </button>
                 <!-- Toggler/collapsibe Menu Button -->
@@ -100,51 +101,41 @@
     </div>
     <!-- NAVBAR -->
 
-    <!-- JUMBOTRON -->
-    <section id="special-id"></section>
-    <div class="big-box">
-        <div class="container-fluid text-center">
-            <h1 class="font-weight-bold big-box-text">TODAY'S SPECIALS</h1>
+    <!-- WELCOME IMAGE -->
+    <div class="container-fluid w-img">
+        <img src="Image/Home/best.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px; z-index: -1;" />
+        <div class="welcome-text">
+            <h1>LEGROCERY</h1>
+            <h3>Greener Solutions!</h3>
         </div>
     </div>
-    <!-- JUMBOTRON -->
+    <!-- WELCOME IMAGE -->
 
     <!-- SPECIAL SLIDER -->
+    <div id="special-id" class="container" style="margin-bottom: 15px;">
+        <div style="display: flex; border-bottom:solid black; border-width: thin; margin-left: 15px;">
+            <h2>Today's</h2>
+            <pre> </pre>
+            <h2 style="color:#90F3B2;">Specials</h2>
+        </div>
+    </div>
     <div id="slides" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner ">
             <div class="carousel-item active">
-                <div class="container padding">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 slider-image">
-                            <img src="Image/Slider/pepper.png" style='height: 100%; width: 100%; object-fit: contain'
-                                alt="slider" />
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 slider-text">
-                            <div class="slider-text-m">
-                                <div class="slider-text-c">
-                                    <div class="font-weight-bold">20% OFF</div>
-                                    <a href="Aisle/FruitsAndVegetables/Product/tomato.html"><button class="slider-shop-btn">SHOP NOW</button></a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="container slider-box-m">
+                    <div class="slider-box-c">
+                        <img class = "slider-img" src = "Image/Slider/slider2.png" />
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="container padding">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 slider-image">
-                            <img src="Image/Slider/fanta.jpg" style='height: 100%; width: 100%; object-fit: contain'
-                                alt="slider" />
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 slider-text">
-                            <div class="slider-text-m">
-                                <div class="slider-text-c">
-                                    <div class="font-weight-bold">20% OFF</div>
-                                    <a href="Aisle/Beverage/Product/fanta.html"><button class="slider-shop-btn">SHOP NOW</button></a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="container slider-box-m">
+                    <div class="slider-box-c">
+                        <img class = "slider-img" src = "Image/Slider/slider1.png" />
                     </div>
                 </div>
             </div>
@@ -158,19 +149,16 @@
     </div>
     <!-- SPECIAL SLIDER -->
 
-    <!-- JUMBOTRON -->
-    <section id="aisle-id">
-        <div class="big-box">
-            <div class="container-fluid text-center">
-                <h1 class="font-weight-bold big-box-text">OUR AISLES</h1>
-            </div>
-        </div>
-    </section>
-    <!-- JUMBOTRON -->
-
     <!-- AISLE -->
+    <div id="aisle-id" class="container">
+        <div style="display: flex; border-bottom:solid black; border-width: thin; margin-left: 15px;">
+            <h2>Our</h2>
+            <pre> </pre>
+            <h2 style="color:#90F3B2;">Aisles</h2>
+        </div>
+    </div>
     <div class="container">
-        <div class="row padding">
+        <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-ml-4 col-xl-4 mt-4">
                 <div class="container">
                     <div class="card">
@@ -240,6 +228,22 @@
         </div>
     </div>
     <!-- AISLE -->
+
+    <!-- BADGES -->
+    <div class="container">
+        <div class="row">
+            <div class="badge col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <img class="badge-img" src="Image/Home/fdaapprouved.png" />
+            </div>
+            <div class="badge col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <img class="badge-img" src="Image/Home/bestprice.png" />
+            </div>
+            <div class="badge col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <img class="badge-img" src="Image/Home/gmofree.png" />
+            </div>
+        </div>
+    </div>
+    <!-- BADGES -->
 
     <!-- FOOTER -->
     <footer id="footer-id">
