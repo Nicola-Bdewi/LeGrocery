@@ -2,6 +2,8 @@
     margin: 0px 15px;
     background-color: white;
     border-radius: 5px;
+    -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .table th {
@@ -19,7 +21,7 @@
 }
 
 #table-body tr:hover {
-    background-color: #33eb88;
+    background-color: #90F3B2;
 }
 
 .table-icon {
@@ -35,7 +37,9 @@
     border-radius: 5px;
     font-size: 25px;
     visibility: hidden;
-    border-color: #25a862;
+    border-color: #009970;
+    -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 #delete-btn {
@@ -45,7 +49,9 @@
     border-radius: 5px;
     font-size: 25px;
     visibility: hidden;
-    border-color: #25a862;
+    border-color: #009970;
+    -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 #table-body tr:hover #edit-btn{
@@ -54,7 +60,7 @@
 }
 
 #table-body tr:hover #edit-btn:hover {
-    background-color: #25a862;
+    background-color: #009970;
     color: white;
 }
 
@@ -63,6 +69,6 @@
 }
 
 #table-body tr:hover #delete-btn:hover{
-    background-color: #25a862;
+    background-color: #009970;
     color: white;
 }

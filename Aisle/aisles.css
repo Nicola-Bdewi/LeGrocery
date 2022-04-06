@@ -26,7 +26,7 @@ input[type=number] {
 
 .big-box {
     display: flex;
-    background: #33eb88;
+    background: #009970;
     max-height: 150px;
     align-items: center;
     text-align: center;
@@ -76,10 +76,10 @@ input[type=number] {
 .plus-minus {
     height: 100%;
     width: 100px;
-    background: #33eb88;
+    background: #009970;
     color: white;
     padding-top: 3px;
-    border-color: #25a862;
+    border-color: #90F3B2;
     border-width: thin;
     border-radius: 5px;
     border-style: solid;
@@ -87,9 +87,9 @@ input[type=number] {
 }
 
 .plus-minus:hover {
-    background: #25a862;
+    background: #90F3B2;
     transition: 0.3s;
-    border-color: #25a862;
+    border-color: #90F3B2;
 }
 
 .quantity-box {
@@ -99,7 +99,7 @@ input[type=number] {
     padding: 0px auto 0px auto;
     text-align: center;
     border-radius: 0px;
-    border-color: #25a862;
+    border-color: #90F3B2;
     border-width: thin;
     border-radius: 5px;
     border-style: solid;
@@ -114,18 +114,18 @@ input[type=number] {
 .quantity-cart a {
     height: 100%;
     width: 100%;
-    background: #33eb88;
+    background: #009970;
     color: white;
-    border-color: #25a862;
+    border-color: #90F3B2;
     border-width: thin;
     border-radius: 5px;
     border-style: solid;
 }
 
 .quantity-cart a:hover {
-    background: #25a862;
+    background: #90F3B2;
     transition: 0.3s;
-    border-color: #25a862;
+    border-color: #90F3B2;
 }
 
 .sort-box {

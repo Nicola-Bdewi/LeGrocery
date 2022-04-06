@@ -49,8 +49,8 @@
 }
 
 .contact-btn:hover {
-    background-color: #25a862;
-    border-color: #25a862;
+    background-color: #009970;
+    border-color: #009970;
     color: white;
     transition: 0.3s;
 }
@@ -71,7 +71,7 @@
 }
 
 .follow a:hover {
-    color: #25a862;
+    color: #009970;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -101,13 +101,20 @@
 
 .footer-quick-links li a:hover{
     text-decoration: none;
-    color: #25a862;
+    color: #009970;
     transition: 0.3s;
 }
 
 #sub-btn {
     width: 100%;
     margin: 5px 0px 0px 0px;
+    background-color: #009970;
+    transition: 0.3s;
+}
+
+#sub-btn:hover {
+    background-color: #90F3B2;
+    transition: 0.3s;
 }
 
 .payment{

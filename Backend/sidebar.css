@@ -9,9 +9,11 @@ body {
     top: 0px;
     left: 0px;
     bottom: 0px;
-    background-color: #33eb88;
+    background-color: #009970;
     overflow-x: hidden;
     transition: 0.5s;
+    -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .logo-box {
@@ -31,7 +33,9 @@ body {
 }
 
 .link-box a:hover {
-    color: #25a862;
+    color: #90F3B2;
+    -webkit-text-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    text-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
   
 #wrapper {
@@ -45,11 +49,13 @@ body {
 
 .header-box {
     display: flex;
-    background-color: #33eb88;
+    background-color: #009970;
     margin: 15px;
     justify-content: space-between;
     height: 60px;
     border-radius: 5px;
+    -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .header-box-c {
@@ -63,6 +69,8 @@ body {
     color: white;
     border-left: solid white;
     padding-left: 8px;
+    -webkit-text-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    text-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 #menu-btn {
@@ -71,20 +79,27 @@ body {
     width: 40px;
     border: none;
     border-radius: 5px;
-    color: #33eb88;
+    color: #009970;
     background-color: white;
     font-size: 25px;
     transition: 0.3s;
+    -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 0px;
 }
 
 #menu-btn:hover {
     color: white;
-    background-color: #25a862;
+    background-color: #90F3B2;
     transition: 0.3s;
+    -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 #add-order-btn-s {
     display: none;
+    -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 #add-order-btn-l {
@@ -92,17 +107,21 @@ body {
     height: 40px;
     border: none;
     border-radius: 5px;
-    color: #33eb88;
+    color: #009970;
     background-color: white;
     font-size: 20px;
     padding: 0px 10px;
     transition: 0.3s;
+    -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 #add-order-btn-l:hover {
     color: white;
-    background-color: #25a862;
+    background-color: #90F3B2;
     transition: 0.3s;
+    -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .user-box {
@@ -118,18 +137,22 @@ body {
     height: 100%;
     width: 100%;
     border: none;
-    color: #33eb88;
+    color: #009970;
     background-color: white;
     font-size: 20px;
     font-weight: bold;
     border-radius: 5px;
     transition: 0.3s;
+    -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 #sign-out-btn:hover {
     color: white;
-    background-color: #25a862;
+    background-color: #90F3B2;
     transition: 0.3s;
+    -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 992px) {
@@ -154,7 +177,7 @@ body {
         width: 40px;
         border: none;
         border-radius: 5px;
-        color: #33eb88;
+        color: #009970;
         background-color: white;
         font-size: 25px;
         transition: 0.3s;
@@ -163,7 +186,7 @@ body {
     
     #add-order-btn-s:hover {
         color: white;
-        background-color: #25a862;
+        background-color: #90F3B2;
         transition: 0.3s;
     }
 }
