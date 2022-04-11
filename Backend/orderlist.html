@@ -18,12 +18,12 @@
     <!-- SIDEBAR -->
     <div id="sidebar">
         <div class="logo-box">
-            <a href="#"><img id="big-logo" src="../Image/Logo/altlogo.png" alt="LOGO"
+            <a href="home.html"><img id="big-logo" src="../Image/Logo/altlogo.png" alt="LOGO"
                     style="width:150px; margin: auto; -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
                     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));" /></a>
         </div>
         <div class="link-box">
-            <a href="#"><i class="fa fa-home" style="width:50px; padding-left: 7px;"></i>HOME</a>
+            <a href="home.html"><i class="fa fa-home" style="width:50px; padding-left: 7px;"></i>HOME</a>
             <a href="ProductList.html"><i class="fa fa-cubes" style="width:50px; padding-left: 5px;"></i>PRODUCTS</a>
             <a href="orderlist.html"><i class="fa fa-truck" style="width:50px; padding-left: 5px;"></i>ORDERS</a>
             <a href="userlist.html"><i class="fa fa-users" style="width:50px; padding-left: 5px;"></i>USERS</a>
@@ -36,7 +36,7 @@
     </div>
 
     <div id="wrapper">
-        <div class="container-fluid">
+        <div class="container">
             <div class="header-box">
                 <div class="header-box-c">
                     <button id="menu-btn" class="fa fa-bars" onclick="toggle()"></button>
@@ -49,61 +49,63 @@
             </div>
 
             <!-- CONTENT -->
-            <div class="content-box">
-                <div class="table-responsive">
-                    <table class="table table-borderless">
-                        <thead>
-                            <tr>
-                                <th class="col-1">ORDER</th>
-                                <th class="col-2">DATE</th>
-                                <th class="col-5">CUSTOMER</th>
-                                <th class="col-2">FULLFILLMENT</th>
-                                <th class="col-1">TOTAL</th>
-                                <th class="col-1"></th>
-                            </tr>
-                        </thead>
-                        <tbody id="table-body">
-                            <tr>
-                                <td>1545</td>
-                                <td>27/03/2022</td>
-                                <td>Jerry</td>
-                                <td>Unfullfilled</td>
-                                <td>34.50$</td>
-                                <td class="table-icon">
-                                    <a href="orderedit.html"><button id="edit-btn"><i class="fa fa-edit"
-                                                title="Edit"></i></button></a>
-                                    <!-- HREF will be removed when button implemented-->
-                                    <button id="delete-btn"><i class="fa fa-trash" title="Delete"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2646</td>
-                                <td>27/03/2022</td>
-                                <td>Tom</td>
-                                <td>Unfullfilled</td>
-                                <td>15.00$</td>
-                                <td class="table-icon">
-                                    <a href="orderedit.html"><button id="edit-btn"><i class="fa fa-edit"
-                                                title="Edit"></i></button></a>
-                                    <!-- HREF will be removed when button implemented-->
-                                    <button id="delete-btn"><i class="fa fa-trash" title="Delete"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4691</td>
-                                <td>29/03/2022</td>
-                                <td>Tim</td>
-                                <td>Fullfilled</td>
-                                <td>30.00$</td>
-                                <td class="table-icon">
-                                    <a href="orderedit.html"><button id="edit-btn"><i class="fa fa-edit"
-                                                title="Edit"></i></button></a>
-                                    <!-- HREF will be removed when button implemented-->
-                                    <button id="delete-btn"><i class="fa fa-trash" title="Delete"></i></button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="container" style="padding: 0px;">
+                <div class="content-box">
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr>
+                                    <th class="col-1">ORDER</th>
+                                    <th class="col-2">DATE</th>
+                                    <th class="col-5">CUSTOMER</th>
+                                    <th class="col-2">FULLFILLMENT</th>
+                                    <th class="col-1">TOTAL</th>
+                                    <th class="col-1"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body">
+                                <tr>
+                                    <td>1545</td>
+                                    <td>27/03/2022</td>
+                                    <td>Jerry</td>
+                                    <td>Unfullfilled</td>
+                                    <td>34.50$</td>
+                                    <td class="table-icon">
+                                        <a href="orderedit.html"><button id="edit-btn"><i class="fa fa-edit"
+                                                    title="Edit"></i></button></a>
+                                        <!-- HREF will be removed when button implemented-->
+                                        <button id="delete-btn"><i class="fa fa-trash" title="Delete"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2646</td>
+                                    <td>27/03/2022</td>
+                                    <td>Tom</td>
+                                    <td>Unfullfilled</td>
+                                    <td>15.00$</td>
+                                    <td class="table-icon">
+                                        <a href="orderedit.html"><button id="edit-btn"><i class="fa fa-edit"
+                                                    title="Edit"></i></button></a>
+                                        <!-- HREF will be removed when button implemented-->
+                                        <button id="delete-btn"><i class="fa fa-trash" title="Delete"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4691</td>
+                                    <td>29/03/2022</td>
+                                    <td>Tim</td>
+                                    <td>Fullfilled</td>
+                                    <td>30.00$</td>
+                                    <td class="table-icon">
+                                        <a href="orderedit.html"><button id="edit-btn"><i class="fa fa-edit"
+                                                    title="Edit"></i></button></a>
+                                        <!-- HREF will be removed when button implemented-->
+                                        <button id="delete-btn"><i class="fa fa-trash" title="Delete"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- CONTENT -->
