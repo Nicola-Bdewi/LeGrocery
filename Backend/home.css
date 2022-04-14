@@ -35,6 +35,7 @@
 
 .container-m:nth-child(1) {
     padding-right: 7.5px;
+    padding-left: 0px;
 }
 
 .container-m:nth-child(2) {
@@ -44,6 +45,7 @@
 
 .container-m:nth-child(3) {
     padding-left: 7.5px;
+    padding-right: 0px;
 }
 
 .card {
@@ -89,6 +91,14 @@
     
     .container-m:nth-child(3) {
         padding-left: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .welcome-text {
+        font-size: 80px;
     }
 
 }

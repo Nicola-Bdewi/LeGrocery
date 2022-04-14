@@ -1,0 +1,19 @@
+<orderlist>
+    <oid>
+        1
+    </oid>
+    
+    <user>
+    
+        <order>
+    
+            <id>1</id>
+            <date>09/04/2022</date>
+            <name>Jimmy</name>
+            <fullfilment>0</fullfilment>
+            <total>35$</total>
+    
+        </order>
+    
+    </user>
+</orderlist>

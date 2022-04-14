@@ -40,6 +40,7 @@
     -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
     padding: 0px;
+    color: black;
 }
 
 #delete-btn {
@@ -53,6 +54,7 @@
     -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
     padding: 0px;
+    color: black;
 }
 
 #table-body tr:hover #edit-btn{
