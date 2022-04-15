@@ -1,3 +1,10 @@
+<?php 
+session_start();
+// security bug fixed. Do not let any access from a get request. 
+if (isset($_GET['log_in'])) {
+  $_SESSION["log_in"] = false;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +23,11 @@
     include('navbar.php')
 
     ?>
+
+
     <!-- NAVBAR -->
+
+
 
     <!-- WELCOME IMAGE -->
     <div class="container-fluid w-img">
