@@ -1,3 +1,7 @@
+<? php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +16,6 @@
     <!-- STYLESHEET -->
     <link rel="stylesheet" type="text/css" href="navbar.css">
 </head>
-
 <body>
     <!-- NAVBAR -->
     <div class="header-box">
@@ -47,12 +50,36 @@
                         <li class="nav-item mbox-item">
                             <a class="nav-link" href="#footer-id">CONTACT</a>
                         </li>
+                         <? php
+                            if ($_SESSION['log_in'] == "notAdmin") {
+                            ?>
+                              
+                            <? php
+                            }
+                            else {
+                              ?>
+                                 <form action="" method="post">
+                                    <button name="byebye">Logout</button>
+                                 </form>
+                              <? php
+                            if(isset($_POST['byebye'])){
+                            session_destroy();
+                            header('Location: index.php');
+                            }
+                         
+
+                            }
+
+                              ?>
+
+                            
                         <li class="nav-item mbox-item nodisplay">
                             <a class="nav-link nodisplay" href="shopping_cart.php">CART</a>
                         </li>
                         <li class="nav-item mbox-item nodisplay">
                             <a class="nav-link nodisplay" href="login.html">LOGIN</a>
                         </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -98,14 +125,14 @@
         </form>
     </div>
     <!-- NAVBAR -->
-
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- JS -->
     <script src="navbar.js"></script>
 </body>
-
 </html>
+<? php
+    session_destroy(); 
+?>
