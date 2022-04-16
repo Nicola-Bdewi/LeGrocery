@@ -1,6 +1,7 @@
 
 <?php 
-session_start(); ?>
+session_start();
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,7 +42,7 @@ session_start(); ?>
                     </div>
                     <button class="btn btn-secondary badge rounded-pill pull-right" type="reset" value="Reset">Reset</button>
                 </form>
-                <p class="text-center mt-3 text-secondary">If you do not have an account, Please <a href="signup.html">Sign up</a></p>
+                <p class="text-center mt-3 text-secondary">If you do not have an account, Please <a href="signup.php">Sign up</a></p>
                 <span>
                 
                 </span>
@@ -64,33 +65,36 @@ session_start(); ?>
         $password = $_POST['password'];
         $users = json_decode(file_get_contents("users.json"), true);
         if($email == "admin@admin.com" && $password == "admin"){
-            $_SESSION['admin_is_logged'] = "admin";
+            session_start();
+            $_SESSION['usernameonnavbar'] = "admin";
             header("Location: Backend/home.php");
             exit();
         }
         else{
             foreach ($users['users'] as $customer => $customerObject) {
-                if ($customerObject['password'] == $password){
-                session_start();
-                $_SESSION["firstname"] = (string)$users->firstname;
-                $_SESSION["customer"] = $customerObject;
+                if ($customerObject['password'] == $password && strcasecmp($customerObject['email'], $email)==0){
+                
+                $_SESSION["usernameonnavbar"] = strval($customerObject['firstname']);
+                
                 $_SESSION["log_in"] = true;
                 $_SESSION['admin_is_logged'] = "notAdmin";
+
                 header('Location: index.php');
                 exit();
+                
                 
             }
             elseif (strcasecmp($customerObject['email'], $email) != 0) {
                 echo '<script type="text/javascript">
                 document.getElementById("res").innerHTML = "There is no account registered with such email";
                 </script>';
-                break;
+                
             }
             else{
                 echo '<script type="text/javascript">
                 document.getElementById("res").innerHTML = "You entered a wrong passowrd. Please try again.";
                 </script>';
-                break;
+                
             }
         }
 
