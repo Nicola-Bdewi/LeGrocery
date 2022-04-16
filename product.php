@@ -1,3 +1,14 @@
+<?php
+
+require_once('functions.php');
+
+$aisleindex = isset($_GET['aisleindex']) ? $_GET['aisleindex'] : redirect();
+$aisleindex = intval($aisleindex);
+$productindex = isset($_GET['productindex']) ? $_GET['productindex'] : redirect();
+$productindex = intval($productindex);
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -29,7 +40,7 @@
     <!-- OVERVIEW -->
 
     <!-- CONTENT -->
-    <div class="container" style="padding: 0px ;">
+    <div class="container">
         <div class="row">
 
             <?php
@@ -39,13 +50,6 @@
             $xmlfile = file_get_contents($path);
 
             $productlist = simplexml_load_string($xmlfile);
-
-            require_once('functions.php');
-
-            $aisleindex = isset($_GET['aisleindex']) ? $_GET['aisleindex'] : redirect();
-            $aisleindex = intval($aisleindex);
-            $productindex = isset($_GET['productindex']) ? $_GET['productindex'] : redirect();
-            $productindex = intval($productindex);
 
             $pid = $productlist->aisle[$aisleindex]->product[$productindex]->pid;
             $image  = $productlist->aisle[$aisleindex]->product[$productindex]->image;
@@ -117,7 +121,7 @@
     <?php
 
     echo '
-            <div class="container more-description" style="padding: 0px;">
+            <div class="container more-description">
                 <button data-toggle="collapse" data-target="#product-description">Description</button>
                 <div class="collapse toggle-box" id="product-description">
                     ' . $description . '

@@ -81,22 +81,6 @@ function update() {
 	PriceItem3();
 }
 
-function counter(obj, id, increment) {
-	temp = document.getElementById(id)
-	current_qty = parseInt(temp.value)
-
-	if (increment) {
-		temp.value = current_qty + 1
-		update();
-	}
-	else {
-		if (temp.value > 1) {
-			temp.value = current_qty - 1
-			update();
-		}
-	}
-}
-
 function checkout(){
 	alert("Thank you for your order, we will get it to you soon!");
 }
