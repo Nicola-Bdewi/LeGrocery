@@ -197,6 +197,7 @@
 
     <!-- CART JS-->
     <script src="cart.js"></script>
+    <script src="quantitycounter.js"></script>
 </body>
 
 </html>

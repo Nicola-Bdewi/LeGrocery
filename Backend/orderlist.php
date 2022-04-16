@@ -1,3 +1,36 @@
+<?php
+session_start();
+
+$_SESSION['action'] = "";
+$_SESSION['orderindex'] = "";
+$_SESSION['orderid'] = "";
+$_SESSION['date'] = "";
+$_SESSION['firstname'] = "";
+$_SESSION['lastname'] = "";
+$_SESSION['item'] = "";
+$_SESSION['total'] = "";
+$_SESSION['aidxstring'] = "";
+$_SESSION['pidxstring'] = "";
+$_SESSION['qidxstring'] = "";
+
+$path = "../Database/orderlist.xml";
+
+$xmlfile = file_get_contents($path);
+
+$orderlist = simplexml_load_string($xmlfile);
+
+if (isset($_GET['action']) && $_GET['action'] == 'delete') {
+    if (isset($_GET['orderindex'])) {
+
+        $orderlist->order[intval($_GET['orderindex'])]->fullfilment = 1;
+        file_put_contents($path, $orderlist->asXML());
+        unset($_GET['orderindex']);
+    }
+    unset($_GET['action']);
+    header("location: orderlist.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,13 +60,14 @@
                     <span>ORDER LIST</span>
                 </div>
                 <div class="header-box-c">
-                    <button id="add-order-btn-s" class="fa fa-plus add-btn" title="Create Order"></button>
-                    <button id="add-order-btn-l" class="add-btn" title="Create Order">Create Order</button>
+                    <a href="orderedit.php?action=add"><button id="add-order-btn-s" class="fa fa-plus add-btn" title="Create Order"></button></a>
+                    <a href="orderedit.php?action=add"><button id="add-order-btn-l" class="add-btn" title="Create Order">Create Order</button></a>
                 </div>
             </div>
             <!-- OBLIGATORY CONTENT -->
 
             <!-- CONTENT -->
+
             <div class="container" style="padding: 0px;">
                 <div class="content-box">
                     <div class="table-responsive">
@@ -43,48 +77,44 @@
                                     <th class="col-1">ORDER</th>
                                     <th class="col-2">DATE</th>
                                     <th class="col-5">CUSTOMER</th>
-                                    <th class="col-2">FULLFILLMENT</th>
+                                    <th class="col-2">ITEM(S)</th>
                                     <th class="col-1">TOTAL</th>
                                     <th class="col-1"></th>
                                 </tr>
                             </thead>
                             <tbody id="table-body">
-                                <tr>
-                                    <td>1545</td>
-                                    <td>27/03/2022</td>
-                                    <td>Jerry</td>
-                                    <td>Unfullfilled</td>
-                                    <td>34.50$</td>
-                                    <td class="table-icon">
-                                        <a href="orderedit.php"><button id="edit-btn"><i class="fa fa-edit" title="Edit"></i></button></a>
-                                        <!-- HREF will be removed when button implemented-->
-                                        <button id="delete-btn"><i class="fa fa-trash" title="Delete"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2646</td>
-                                    <td>27/03/2022</td>
-                                    <td>Tom</td>
-                                    <td>Unfullfilled</td>
-                                    <td>15.00$</td>
-                                    <td class="table-icon">
-                                        <a href="orderedit.php"><button id="edit-btn"><i class="fa fa-edit" title="Edit"></i></button></a>
-                                        <!-- HREF will be removed when button implemented-->
-                                        <button id="delete-btn"><i class="fa fa-trash" title="Delete"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4691</td>
-                                    <td>29/03/2022</td>
-                                    <td>Tim</td>
-                                    <td>Fullfilled</td>
-                                    <td>30.00$</td>
-                                    <td class="table-icon">
-                                        <a href="orderedit.php"><button id="edit-btn"><i class="fa fa-edit" title="Edit"></i></button></a>
-                                        <!-- HREF will be removed when button implemented-->
-                                        <button id="delete-btn"><i class="fa fa-trash" title="Delete"></i></button>
-                                    </td>
-                                </tr>
+                                <?php
+
+                                for ($idx = 0; $idx < $orderlist->order->count(); $idx++) {
+
+                                    if ($orderlist->order[$idx]->fullfilment == 0) {
+                                        $oid = $orderlist->order[$idx]->oid;
+                                        $date = $orderlist->order[$idx]->date->yy . '-' . $orderlist->order[$idx]->date->mm . '-' . $orderlist->order[$idx]->date->dd;
+                                        $firstname = $orderlist->order[$idx]->name->firstname;
+                                        $lastname = $orderlist->order[$idx]->name->lastname;
+                                        $item = $orderlist->order[$idx]->item;
+                                        $total = $orderlist->order[$idx]->total;
+
+                                        echo '
+
+                                            <tr>
+                                                <td>' . $oid . '</td>
+                                                <td>' . $date . '</td>
+                                                <td>' . $firstname . ' ' . $lastname . '</td>
+                                                <td>' . $item . '</td>
+                                                <td>' . strval(number_format(((floatval($total) * 1.15)), 2, '.', '')). '$</td>
+                                                <td class="table-icon">
+                                                    <a href="orderedit.php?action=edit&orderindex=' . $idx . '&orderid='.$oid.'&date='.$date.'&firstname='.$firstname.'&lastname='.$lastname.'&item='.$item.'&total='.$total.'">
+                                                    <button id="edit-btn"><i class="fa fa-edit" title="Edit"></i></button></a>
+                                                    <a href="orderlist.php?action=delete&orderindex=' . $idx . '"><button id="delete-btn"><i class="fa fa-trash" title="Delete"></i></button></a>
+                                                </td>
+                                            </tr>
+
+                                        ';
+                                    }
+                                }
+
+                                ?>
                             </tbody>
                         </table>
                     </div>

@@ -1,3 +1,12 @@
+<?php
+
+require_once('functions.php');
+
+$aisleindex = isset($_GET['aisleindex']) ? $_GET['aisleindex'] : redirect();
+$aisleindex = intval($aisleindex);
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -31,10 +40,6 @@
 
             $productlist = simplexml_load_string($xmlfile);
 
-            require_once('functions.php');
-
-            $aisleindex = isset($_GET['aisleindex']) ? $_GET['aisleindex'] : redirect();
-            $aisleindex = intval($aisleindex);
             $aislename = $productlist->aisle[$aisleindex]->aislename;
 
             echo '<h1 class="font-weight-bold">' . $aislename . '</h1>';
@@ -102,7 +107,7 @@
     <!-- FOOTER -->
 
     <!-- PRODUCT QUANTITY COUNTER-->
-    <script src="aislecounter.js"></script>
+    <script src="quantitycounter.js"></script>
 
 </body>
 
