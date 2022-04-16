@@ -37,7 +37,7 @@
             <!-- Navbar text links -->
             <div class="collapse navbar-collapse menu-box menu-toggle-box" id="collapsibleNavbar">
                 <div class="navbar-mbox">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav" id="listUser">
                         <li class="nav-item mbox-item">
                             <a class="nav-link" href="index.php">HOME</a>
                         </li>
@@ -50,34 +50,24 @@
                         <li class="nav-item mbox-item">
                             <a class="nav-link" href="#footer-id">CONTACT</a>
                         </li>
-                         <? php
-                            if ($_SESSION['log_in'] == "notAdmin") {
-                            ?>
-                              
-                            <? php
-                            }
-                            else {
-                              ?>
-                                 <form action="" method="post">
-                                    <button name="byebye">Logout</button>
-                                 </form>
-                              <? php
-                            if(isset($_POST['byebye'])){
-                            session_destroy();
-                            header('Location: index.php');
-                            }
-                         
+                        
+                                <li class="nav-item mbox-item" style="<?php if(!empty($_SESSION)) {echo "display:block;";} else{echo "display:none;";}?>">
+                                <a class="nav-link" href="">Welcome, <?php echo $_SESSION["usernameonnavbar"]; ?>!</a>
+                                </li>
 
-                            }
+                                <li>
+                                       <a href="logout.php">Log Out</a>                         
 
-                              ?>
+                                </li>
+
+                            
 
                             
                         <li class="nav-item mbox-item nodisplay">
                             <a class="nav-link nodisplay" href="shopping_cart.php">CART</a>
                         </li>
                         <li class="nav-item mbox-item nodisplay">
-                            <a class="nav-link nodisplay" href="login.html">LOGIN</a>
+                            <a class="nav-link nodisplay" href="login.php">LOGIN</a>
                         </li>
                         
                     </ul>
@@ -98,7 +88,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navbar-icon" href="login.html">
+                            <a class="nav-link navbar-icon" href="login.php">
                                 <div id="login-btn" class="fa fa-user icon-btn"></div>
                             </a>
                         </li>
@@ -133,6 +123,11 @@
     <script src="navbar.js"></script>
 </body>
 </html>
-<? php
-    session_destroy(); 
-?>
+ <? php 
+    if(isset($_POST['logoutnav'])){
+        unset($_SESSION);
+        setcookie('PHPSESSID', '', -3600, '/cv');
+        session_destroy();
+        header('Location: login.php');
+        }
+?> 
