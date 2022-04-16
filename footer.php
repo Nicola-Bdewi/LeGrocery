@@ -1,3 +1,8 @@
+<? php
+session_start();
+
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +13,6 @@
     <!-- STYLESHEET -->
     <link rel="stylesheet" type="text/css" href="footer.css">
 </head>
-
 <body>
     <!-- FOOTER -->
     <footer id="footer-id">
@@ -31,20 +35,40 @@
                         </div>
                         <hr class="h-line" />
                     </div>
-
                     <div class="quick col-sm-12 col-md-4 col-lg-4 col-xl-4">
                         <span style="font-weight: bold; font-size: 20px;">QUICK LINKS</span>
                         <ul class="footer-quick-links">
                             <li><a href="index.php">Home</a></li>
                             <li><a href="index.php#special-id">Special</a></li>
                             <li><a href="index.php#aisle-id">Aisle</a></li>
-                            <li><a href="Backend/home.php">FAQ</a></li> <!-- CHANGE IT BEFORE SUBMITTING//////////////////////////////////////////////////////////////////////-->
+
+
+                            <form method="POST">
+
+                            <li><a>Back-end</a></li> <!-- CHANGE IT BEFORE SUBMITTING//////////////////////////////////////////////////////////////////////-->
+
+                            <? php
+                            // Authentication to enter the back-end
+                                if (strcmp($_SESSION['usernameonnavbar'] , "admin")!=0){
+                                    echo '<script type="text/javascript"> window.open("login.php","_self");</script>';
+                                }
+
+                                if(strcmp($_SESSION['usernameonnavbar'] , "admin")==0){
+                                    echo '<script type="text/javascript"> window.open("Backend/home.php","_self");</script>';
+                                    }
+
+                                ?>
+
+                                </form>
+
+
+
+
                             <li><a href="shopping_cart.html">Shopping Cart</a></li>
                             <li><a href="login.html">Login</a></li>
                         </ul>
                         <hr class="h-line" />
                     </div>
-
                     <div class="newsletter col-sm-12 col-md-4 col-lg-4 col-xl-4">
                         <div class="subscribe">
                             <span style="font-weight: bold; font-size: 20px;">SUBSCRIBE TO OUR NEWSLETTER</span>
@@ -71,7 +95,5 @@
         </div>
     </footer>
     <!-- FOOTER -->
-
 </body>
-
 </html>
