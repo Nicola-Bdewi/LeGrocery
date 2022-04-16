@@ -142,7 +142,7 @@ if((isset($_POST["password"])&&empty($_POST["password"]))||isset($_POST["passwor
             file_put_contents('users.json', json_encode($array_data));
             $_SESSION["costumer"] = $_POST;
             $_SESSION["log_in"] = true;
-            header("Location: index.php");
+            header("Location: login.php");
             exit();
 
     }
