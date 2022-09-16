@@ -4,7 +4,7 @@
 **admin@admin.com for email and admin for password** could be used to try login into the website. 
 No database was used. Instead, a JSON file is responsible for checking users. 
 
-![Login image](https://i.ibb.co/SJqPdc7/image.png)
+![Login image](https://i.postimg.cc/sX4TFtqT/Untitled.png)
 
 ## Products
 You can choose the number of every product, but the shopping cart still needs some enhancements.  
